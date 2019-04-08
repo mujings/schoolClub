@@ -3,15 +3,11 @@ import {
 } from "./tip";
 const app = getApp();
 
-// var http = 'http://192.168.1.124:8080/kooun-hongkedou-user'; //喜沛
+var http = 'http://192.168.1.124:8080/kooun-hongkedou-user'; //
 
-// var http = 'http://47.106.197.214:8083/kooun-hongkedou-user';//测试
-
-var http = 'https://hongkedou.user.infotoo.com.cn/kooun-hongkedou-user';//正式域名
+// var http = 'https://hongkedou.user.infotoo.com.cn/kooun-hongkedou-user';//正式域名
 
 var httpUpload = 'https://hongkedou.file.infotoo.com.cn/kooun-file/file/pic/upload.wx';
-
-var mapHttp = 'https://restapi.amap.com';
 
 function wxRequest(url, data, callback) {
     tips.loading();
@@ -25,6 +21,7 @@ function wxRequest(url, data, callback) {
         method: 'POST',
         data: data,
         success(res) {
+            tips.loaded()
             if (res.statusCode == 200) {
                 if (res.data.status == '401') {
                     tips.confirm(res.data.message).then(
@@ -43,15 +40,13 @@ function wxRequest(url, data, callback) {
                 } else {
                     typeof callback == "function" && callback(res);
                 }
-                tips.loaded()
             } else {
                 tips.toast('系统繁忙', '', "none");
-                tips.loaded()
             }
         },
         fail() {
-            tips.toast('网络崩溃啦~', '', "none");
             tips.loaded();
+            tips.toast('网络崩溃啦', '', "none");
         }
     });
 }
@@ -69,10 +64,9 @@ function wxRequestUpload(filePath, callback) {
         },
         method: 'POST',
         success(res) {
+            tips.loaded();
             if (res.statusCode == 200) {
-
                 typeof callback == "function" && callback(res);
-
             } else if (res.statusCode == 401) {
                 tips.confirm('登录失效，请重新登录！').then(
                     function (res) {
@@ -84,42 +78,16 @@ function wxRequestUpload(filePath, callback) {
             } else {
                 tips.toast('系统繁忙', '', "none");
             }
-            tips.loaded();
         },
         fail() {
-            tips.toast('网络崩溃啦~', '', "none");
             tips.loaded();
+            tips.toast('网络崩溃啦', '', "none");
         }
     });
-}
-
-// 高德地图请求接口
-function mapApi(url, data, callback) {
-    wx.request({
-        url: mapHttp + url,
-        method: "POST",
-        header: {
-            'content-type': 'application/x-www-form-urlencoded'
-        },
-        data: data,
-        success: function (res) {
-            if (res.data.status == "1") {
-
-                typeof callback == "function" && callback(res);
-
-            } else {
-                tips.toast('系统繁忙', '', "none");
-            }
-        },
-        fail: function (res) {
-            tips.toast('网络崩溃啦~', '', "none");
-        }
-    })
 }
 
 export {
     wxRequest,
     wxRequestUpload,
-    mapApi,
     http
 }
