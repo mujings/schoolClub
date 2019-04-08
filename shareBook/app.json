@@ -1,11 +1,25 @@
 {
-  "pages":[
-    "pages/index/index"
+  "pages": [
+    "pages/index/index",
+    "pages/issue/issue",
+    "pages/center/center"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "校园共享汇",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "广场"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "发布"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "我的"
+    }]
   }
 }
