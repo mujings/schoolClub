@@ -1,0 +1,1 @@
+.wux-sticky-item{position:relative;font-size:28rpx}.wux-sticky-item__hd{background:#eee;width:100%}.wux-sticky-item__title{width:100%;box-sizing:border-box;background:#eee}.wux-sticky-item--fixed .wux-sticky-item__title{position:fixed;left:0;top:0;z-index:2}

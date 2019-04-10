@@ -1,0 +1,77 @@
+<wux-search-bar clear bind:cancel="search" bind:confirm="search" cancelText="搜索" />
+<wux-sticky scrollTop="{{ scrollTop }}">
+    <wux-sticky-item>
+        <scroll-view slot="title" class="classify" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+            <view class="classifyItem wux-balanced">计算机</view>
+            <view class="classifyItem">土木工程</view>
+            <view class="classifyItem">交通</view>
+            <view class="classifyItem">通讯工程</view>
+            <view class="classifyItem">计算机</view>
+            <view class="classifyItem">土木工程</view>
+            <view class="classifyItem">交通</view>
+            <view class="classifyItem">通讯工程</view>
+        </scroll-view>
+        <view slot="content" class="articleBox">
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title wux-ellipsis">jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title wux-ellipsis">jsp编程jsp编程jsp编程jsp编程jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title wux-ellipsis">jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title">jsp编程jsp编程jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title wux-ellipsis">jsp编程jsp编程jsp编程jsp编程jsp编程jsp编程jsp编程jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+            <view class='articleItem'>
+                <image mode="aspectFill" class="articleImg"
+                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                <view class="title">jsp编程</view>
+                <view class="bottom">
+                    <image class="head"
+                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                    <view class="price">299积分</view>
+                </view>
+            </view>
+        </view>
+    </wux-sticky-item>
+</wux-sticky>

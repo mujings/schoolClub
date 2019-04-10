@@ -8,11 +8,7 @@ var tips = {
                 title: title,
                 icon: 'none',
                 success: res => {
-                    if (res.confirm) {
-                        resolve(res);
-                    } else if (res.cancel) {
-                        reject(res);
-                    }
+                    resolve(res);
                 },
                 fail: res => {
                     reject(res);
@@ -68,7 +64,16 @@ var tips = {
     },
 
     loaded() {
-        wx.hideLoading();
+        return new Promise((resolve, reject) => {
+            wx.hideLoading({
+                success: res => {
+                    resolve(res);
+                },
+                fail: res => {
+                    reject(res);
+                }
+            });
+        })
     }
 }
 
