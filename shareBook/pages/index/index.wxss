@@ -1,16 +1,8 @@
-/* .searchBar {
-    position: fixed;
-    top: 0;
-    width: 100%
-} */
-
 .classify {
     width: 100%;
     white-space: nowrap;
-    background: white;
     padding: 25rpx 20rpx;
     box-sizing: border-box;
-    font-size: 30rpx;
 }
 
 ::-webkit-scrollbar {
@@ -32,7 +24,6 @@
 }
 
 .articleBox .articleItem {
-    background-color: white;
     width: 46%;
     box-sizing: border-box;
     margin: 20rpx 0 0 20rpx;
@@ -44,18 +35,13 @@
 }
 
 .articleItem .title {
-    padding: 10rpx;
     box-sizing: border-box;
-    font-size: 26rpx;
-
 }
 
 .articleItem .bottom {
     display: flex;
-    font-size: 24rpx;
     align-items: center;
     justify-content: space-between;
-    padding: 10rpx;
     box-sizing: border-box
 }
 

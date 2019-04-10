@@ -2,6 +2,10 @@ Page({
   data: {
       scrollTop: 0,
   },
+  
+  onLoad() {
+
+  },
 
   onPageScroll(e){
       console.log('onPageScroll', e.scrollTop)
@@ -9,8 +13,10 @@ Page({
           scrollTop: e.scrollTop,
       })
   },
-  
-  onLoad() {
 
-  },
+  toDetail(e){
+      wx.navigateTo({
+          url: 'bookDetail/bookDetail'
+      });
+  }
 })

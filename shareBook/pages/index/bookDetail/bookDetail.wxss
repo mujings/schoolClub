@@ -1,0 +1,41 @@
+.slide-image {
+    width: 100%;
+}
+
+.bookInfo {
+    margin-top: 2px;
+}
+
+.bookInfo .bottom {
+    padding: 0 20rpx 20rpx 20rpx;
+    display: flex;
+    justify-content: space-between
+}
+
+.commentBox .head {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%
+}
+
+.commentBox {
+    display: flex
+}
+
+.commentBox .right {
+    margin-left: 20rpx;
+}
+
+.btnBox {
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btnBox view {
+    width: 50%;
+}

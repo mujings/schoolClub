@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/issue/issue",
-    "pages/center/center"
+    "pages/center/center",
+    "pages/index/bookDetail/bookDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -11,15 +12,20 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "广场"
-    },{
-      "pagePath": "pages/index/index",
-      "text": "发布"
-    },{
-      "pagePath": "pages/index/index",
-      "text": "我的"
-    }]
+    "selectedColor": "#33CD5F",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "广场"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的"
+      }
+    ]
   }
 }
