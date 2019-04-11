@@ -1,0 +1,38 @@
+.head {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.head .headImg {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.content {
+    padding: 20rpx 20rpx 0;
+    margin-bottom: 100rpx;
+}
+
+.item {
+    display: flex;
+    padding: 20rpx 0;
+    border-top: 1rpx #eee solid
+}
+
+.item .itemImg {
+    width: 140rpx;
+    height: 180rpx;
+    margin-right: 20rpx;
+}
+
+.btn {
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

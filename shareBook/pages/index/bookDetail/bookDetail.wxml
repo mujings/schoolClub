@@ -15,13 +15,13 @@
     <wux-tag color="#33CD5F">校内交易</wux-tag>
 </view>
 <view class="commentBox pd20 wux-light--bg">
-    <image class="head" src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+    <image class="head" catch:tap="toUserDetail" src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
     <view class="right">
-        <view class="fz32">楼主</view>
+        <view class="fz32" catch:tap="toUserDetail">楼主</view>
         <view>九五新</view>
     </view>
 </view>
 <view class="btnBox colw">
-    <view class="wux-assertive--bg">举报违规</view>
-    <view class="wux-balanced--bg">立即交易</view>
+    <view class="wux-assertive--bg" catch:tap="toReport">举报违规</view>
+    <view class="wux-balanced--bg" catch:tap="toOrder">立即交易</view>
 </view>

@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/issue/issue",
     "pages/center/center",
-    "pages/index/bookDetail/bookDetail"
+    "pages/index/bookDetail/bookDetail",
+    "pages/index/userDetail/userDetail",
+    "pages/index/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,11 +21,11 @@
         "text": "广场"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/issue/issue",
         "text": "发布"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/center/center",
         "text": "我的"
       }
     ]

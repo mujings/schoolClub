@@ -4,6 +4,7 @@ page {
     font-size: 28rpx;
 }
 
+/* 去除按钮边框 */
 button:before,
 button:after {
     border: none;
@@ -13,10 +14,16 @@ input {
     font-size: 28rpx;
 }
 
+/* 字体颜色 */
 .colw {
     color: white
 }
 
+.cold {
+    color: #444
+}
+
+/* 字体大小 */
 .fz24 {
     font-size: 24rpx;
 }
@@ -33,6 +40,7 @@ input {
     font-size: 36rpx;
 }
 
+/* 内边距 */
 .pd10 {
     padding: 10rpx;
 }

@@ -1,0 +1,74 @@
+<view class="head pd20">
+    <image class="headImg"
+        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+    <view>路人</view>
+</view>
+<view class="wux-light--bg content">
+    <view class="wux-dark">借出记录</view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32 wux-ellipsis">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32 wux-ellipsis">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+    <view class="item">
+        <image class="itemImg"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            mode="aspectFill" />
+        <view class="right">
+            <view class="title fz32 wux-ellipsis">jsp</view>
+            <view class="info wux-dark">666</view>
+        </view>
+    </view>
+</view>
+<view class="wux-assertive--bg wux-light btn">
+    举报违规
+</view>

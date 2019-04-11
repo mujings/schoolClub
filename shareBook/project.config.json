@@ -37,12 +37,26 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "书本详情",
 					"pathName": "pages/index/bookDetail/bookDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "用户详情",
+					"pathName": "pages/index/userDetail/userDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "下单",
+					"pathName": "pages/index/order/order",
 					"scene": null
 				}
 			]

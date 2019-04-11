@@ -13,13 +13,14 @@
 }
 
 .commentBox .head {
-    width: 60rpx;
-    height: 60rpx;
+    width: 80rpx;
+    height: 80rpx;
     border-radius: 50%
 }
 
 .commentBox {
-    display: flex
+    display: flex;
+    margin-bottom: 100rpx;
 }
 
 .commentBox .right {
@@ -28,8 +29,8 @@
 
 .btnBox {
     display: flex;
-    height: 80rpx;
-    line-height: 80rpx;
+    height: 100rpx;
+    line-height: 100rpx;
     text-align: center;
     position: fixed;
     bottom: 0;

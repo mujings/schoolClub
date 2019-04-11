@@ -1,0 +1,26 @@
+.infoBox{
+    display: flex
+}
+.infoBox .bookImg{
+    width: 160rpx;
+    height: 220rpx;
+}
+.infoBox .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+.btnBox{
+    display: flex;
+    height: 100rpx;
+    line-height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.btnBox .left{
+    flex: 1;
+}
+.btnBox .btn{
+    width: 200rpx;
+}
