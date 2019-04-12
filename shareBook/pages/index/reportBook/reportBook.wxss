@@ -1,0 +1,27 @@
+.bookInfo{
+
+}
+
+.userInfo{
+    display: flex;
+    align-items: center
+}
+
+.userInfo .head{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.bookInfo .bookName{
+    padding: 0 20rpx 20rpx 120rpx;
+}
+
+.btnBox{
+    display: flex;
+    justify-content: center
+}
+
+.btn{
+    width: 250rpx;
+}

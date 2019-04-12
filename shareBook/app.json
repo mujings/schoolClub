@@ -5,7 +5,8 @@
     "pages/center/center",
     "pages/index/bookDetail/bookDetail",
     "pages/index/userDetail/userDetail",
-    "pages/index/order/order"
+    "pages/index/order/order",
+    "pages/index/reportBook/reportBook"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,0 +1,28 @@
+<view class="bookInfo">
+    <view class="wux-pl--10 wux-dark">举报动态</view>
+    <view class="userInfo wux-light--bg pd20">
+        <image class="head wux-mr--10"
+            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+        <view class="userName">楼主</view>
+    </view>
+    <view class="bookName wux-light--bg">书名</view>
+</view>
+<view class="item">
+    <view class="wux-pl--10 wux-dark">举报原因</view>
+    <wux-radio-group name="d" value="{{type}}" bind:change="onChange">
+        <wux-radio title="色情、低俗内容" value="1" />
+        <wux-radio title="政治、暴力敏感内容" value="2" />
+        <wux-radio title="小广告" value="3" />
+        <wux-radio title="虚假信息、谣言" value="4" />
+        <wux-radio title="其他" value="5" />
+    </wux-radio-group>
+    <wux-cell-group>
+        <wux-cell hover-class="none">
+            <wux-textarea disabled="{{textDisable}}" showConfirmBar="{{false}}" maxlength="50" autoHeight hasCount
+                placeholder="请输入举报原因" bind:change="getText" />
+        </wux-cell>
+    </wux-cell-group>
+</view>
+<view class="btnBox wux-mt--20">
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+</view>

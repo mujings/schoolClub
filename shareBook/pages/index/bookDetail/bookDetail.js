@@ -43,7 +43,7 @@ Page({
 
   toReport(e) {
     wx.navigateTo({
-      url: '../report/report'
+      url: '../reportBook/reportBook'
     });
   },
 

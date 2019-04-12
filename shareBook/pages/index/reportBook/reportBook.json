@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "举报违规",
+  "usingComponents": {
+    "wux-selectable": "../../../dist/selectable/index",
+    "wux-radio-group": "../../../dist/radio-group/index",
+    "wux-radio": "../../../dist/radio/index",
+    "wux-cell-group": "../../../dist/cell-group/index",
+    "wux-cell": "../../../dist/cell/index",
+    "wux-textarea": "../../../dist/textarea/index",
+    "wux-button": "../../../dist/button/index"
+  }
+}
