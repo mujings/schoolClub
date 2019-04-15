@@ -1,8 +1,11 @@
 .classify {
     width: 100%;
     white-space: nowrap;
-    padding: 25rpx 20rpx;
+    padding: 0rpx 20rpx;
     box-sizing: border-box;
+}
+.classifyBox{
+    padding: 25rpx 0
 }
 
 ::-webkit-scrollbar {

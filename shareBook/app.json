@@ -6,7 +6,8 @@
     "pages/index/bookDetail/bookDetail",
     "pages/index/userDetail/userDetail",
     "pages/index/order/order",
-    "pages/index/reportBook/reportBook"
+    "pages/index/reportBook/reportBook",
+    "pages/issue/issueBook/issueBook"
   ],
   "window": {
     "backgroundTextStyle": "light",

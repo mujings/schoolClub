@@ -1,2 +1,13 @@
-<!--pages/center/center.wxml-->
-<text>pages/center/center.wxml</text>
+<view class="userInfo pd20 wux-light--bg wux-mb--20">
+    <image class="head wux-mr--10" src="https://wux.cdn.cloverstd.com/logo.png" />
+    <view>楼主</view>
+</view>
+
+<wux-cell-group>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的信息" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="修改付款密码" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="使用协议" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="反馈" is-link></wux-cell>
+</wux-cell-group>

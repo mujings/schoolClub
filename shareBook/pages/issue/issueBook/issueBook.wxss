@@ -1,0 +1,32 @@
+.sv{
+    height: 230rpx;
+}
+
+.img_box_tip {
+    color: #666666;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.picture {
+    border-bottom: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.picture .pictureUrl {
+    width: 210rpx;
+    height: 210rpx;
+    margin-right: 30rpx;
+    margin-top: 20rpx;
+}
+
+.btnBox{
+    display: flex;
+    justify-content: center
+}
+
+.btn{
+    width: 250rpx;
+}

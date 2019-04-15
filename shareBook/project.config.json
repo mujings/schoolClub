@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -64,6 +64,27 @@
 					"id": -1,
 					"name": "举报动态",
 					"pathName": "pages/index/reportBook/reportBook",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布",
+					"pathName": "pages/issue/issue",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布书本",
+					"pathName": "pages/issue/issueBook/issueBook",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/center/center",
 					"scene": null
 				}
 			]

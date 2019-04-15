@@ -1,2 +1,12 @@
-<!--pages/issue/issue.wxml-->
-<text>pages/issue/issue.wxml</text>
+<view class="pd20">
+    <wux-card bordered="{{ false }}" title="发布书本" thumb="https://wux.cdn.cloverstd.com/logo.png" bind:tap="toIssueBook">
+        <view slot="body">卡片内容</view>
+        <view slot="footer">尾部内容</view>
+    </wux-card>
+</view>
+<view class="pd20">
+    <wux-card bordered="{{ false }}" title="求书本" thumb="https://wux.cdn.cloverstd.com/logo.png"  bind:tap="toBegBook">
+        <view slot="body">该功能尚未开放</view>
+        <view slot="footer">敬请期待</view>
+    </wux-card>
+</view>

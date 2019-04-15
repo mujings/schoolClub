@@ -1,0 +1,51 @@
+<wux-cell-group title="图书信息">
+    <wux-cell hover-class="none">
+        <wux-input label="书名" placeholder="点击右边图标扫ISBN码" />
+        <view slot="footer" class="">扫码
+        </view>
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="作者" placeholder="请输入作者" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="出版社" placeholder="请输入出版社" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="价格" placeholder="请输入价格" type="number" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-textarea rows="3" label="备注" hasCount placeholder="描述一下你的书本吧" />
+    </wux-cell>
+    <wux-cell>
+        <view class="img_box">
+            <view class="img_box_tip">添加图片(最多添加6张)</view>
+            <view class="picture">
+                <scroll-view class="sv" scroll-x>
+                    <image wx:for="{{images}}" bindtap='delPic' data-id="{{index}}" wx:key="{{index}}"
+                        class="pictureUrl" src="{{item}}"></image>
+                    <image style='width: 210rpx;height: 210rpx;' src='../../../img/upload1.png'
+                        wx:if="{{images.length<6}}" class="choosePic" bindtap="choosePic"></image>
+                </scroll-view>
+            </view>
+        </view>
+    </wux-cell>
+</wux-cell-group>
+
+<wux-cell-group title="交易信息">
+    <wux-cell hover-class="none" title="数量">
+        <wux-input-number slot="footer" shape="circle" color="balanced" slot="footer" min="1" max="3" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="积分" placeholder="请输入书本所需积分（单价）" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="联系方式" placeholder="请输入联系方式" />
+    </wux-cell>
+    <wux-cell hover-class="none" title="交易方式">
+        <wux-tag slot="footer" color="#33CD5F">校内交易</wux-tag>
+        <wux-tag slot="footer" color="#33CD5F">校内交易</wux-tag>
+    </wux-cell>
+</wux-cell-group>
+<view class="btnBox wux-mt--20">
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+</view>

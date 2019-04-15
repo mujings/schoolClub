@@ -1,16 +1,17 @@
 <wux-search-bar clear bind:cancel="search" bind:confirm="search" cancelText="搜索" />
 <wux-sticky scrollTop="{{0}}">
     <wux-sticky-item>
-        <scroll-view slot="title" class="classify fz32 wux-light--bg" scroll-x="{{true}}"
-            scroll-with-animation="{{true}}">
-            <view class="classifyItem wux-balanced">计算机</view>
-            <view class="classifyItem">土木工程</view>
-            <view class="classifyItem">交通</view>
-            <view class="classifyItem">通讯工程</view>
-            <view class="classifyItem">计算机</view>
-            <view class="classifyItem">土木工程</view>
-            <view class="classifyItem">交通</view>
-            <view class="classifyItem">通讯工程</view>
+        <scroll-view slot="title" class="classify wux-light--bg" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+            <view class="classifyBox">
+                <view class="classifyItem wux-balanced">计算机</view>
+                <view class="classifyItem">土木工程</view>
+                <view class="classifyItem">交通</view>
+                <view class="classifyItem">通讯工程</view>
+                <view class="classifyItem">计算机</view>
+                <view class="classifyItem">土木工程</view>
+                <view class="classifyItem">交通</view>
+                <view class="classifyItem">通讯工程</view>
+            </view>
         </scroll-view>
         <view slot="content" class="articleBox">
             <view class='articleItem wux-light--bg' bind:tap="toBookDetail">
@@ -22,7 +23,7 @@
                         src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
                     <view class="right">
                         <view class="time fz24 wux-text--right">
-                            <wux-timeago to="2019-04-12 12:12:00"/>
+                            <wux-timeago to="2019-04-12 12:12:00" />
                         </view>
                         <view class="price fz24 wux-text--right">299积分</view>
                     </view>

@@ -1,1 +1,10 @@
-/* pages/center/center.wxss */
+.userInfo{
+    display: flex;
+    align-items: center
+}
+
+.userInfo .head {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
