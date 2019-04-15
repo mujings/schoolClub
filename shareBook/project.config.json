@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 7,
+			"current": 9,
 			"list": [
 				{
 					"id": -1,
@@ -92,6 +92,20 @@
 					"id": -1,
 					"name": "个人信息",
 					"pathName": "pages/center/userInfo/userInfo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的积分",
+					"pathName": "pages/center/integral/integral",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "积分充值",
+					"pathName": "pages/center/recharge/recharge",
 					"scene": null
 				}
 			]

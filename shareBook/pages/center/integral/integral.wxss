@@ -1,1 +1,3 @@
-/* pages/center/integral/integral.wxss */
+.head{
+    font-size: 60rpx
+}

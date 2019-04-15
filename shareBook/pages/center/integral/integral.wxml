@@ -1,2 +1,20 @@
-<!--pages/center/integral/integral.wxml-->
-<text>pages/center/integral/integral.wxml</text>
+<view class="head wux-text--center wux-p--30">
+    <text class="wux-balanced">666</text>积分
+</view>
+<wux-cell-group title="积分记录" class="mb100"> 
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+    <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
+</wux-cell-group>
+<navigator class="wux-balanced--bg wux-light bottomBtn">
+    积分充值
+</navigator>

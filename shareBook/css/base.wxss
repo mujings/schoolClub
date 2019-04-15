@@ -1,0 +1,73 @@
+page {
+    display: flex;
+    flex-direction: column;
+    font-size: 28rpx;
+}
+
+/* 去除按钮边框 */
+button:before,
+button:after {
+    border: none;
+}
+
+/* 底部通栏按钮 */
+.bottomBtn {
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 底部通栏按钮上面列表 */
+.mb100{
+    margin-bottom: 100rpx
+}
+
+input {
+    font-size: 28rpx;
+}
+
+/* 字体颜色 */
+.colw {
+    color: white
+}
+
+.cold {
+    color: #444
+}
+
+/* 字体大小 */
+.fz24 {
+    font-size: 24rpx;
+}
+
+.fz28 {
+    font-size: 28rpx;
+}
+
+.fz32 {
+    font-size: 32rpx;
+}
+
+.fz36 {
+    font-size: 36rpx;
+}
+
+/* 内边距 */
+.pd10 {
+    padding: 10rpx;
+}
+
+.pd20 {
+    padding: 20rpx;
+}
+
+.pd25 {
+    padding: 25rpx;
+}
+
+.pd30 {
+    padding: 30rpx;
+}

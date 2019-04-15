@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "我的积分",
+  "usingComponents": {
+    "wux-cell-group": "../../../dist/cell-group/index",
+    "wux-cell": "../../../dist/cell/index"
+  }
 }

@@ -1,5 +1,5 @@
 @import 'dist/styles/index.wxss';
-@import 'dist/styles/base.wxss';
+@import 'css/base.wxss';
 page{
   background-color: #EFEFF4
 }

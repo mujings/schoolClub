@@ -13,7 +13,6 @@
 
 .content {
     padding: 20rpx 20rpx 0;
-    margin-bottom: 100rpx;
 }
 
 .item {
@@ -26,13 +25,4 @@
     width: 140rpx;
     height: 180rpx;
     margin-right: 20rpx;
-}
-
-.btn {
-    height: 100rpx;
-    line-height: 100rpx;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
