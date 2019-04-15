@@ -7,7 +7,16 @@
     "pages/index/userDetail/userDetail",
     "pages/index/order/order",
     "pages/index/reportBook/reportBook",
-    "pages/issue/issueBook/issueBook"
+    "pages/issue/issueBook/issueBook",
+    "pages/center/userInfo/userInfo",
+    "pages/center/integral/integral",
+    "pages/center/recharge/recharge",
+    "pages/center/record/record",
+    "pages/center/recordDetail/recordDetail",
+    "pages/center/changePw/changePw",
+    "pages/center/feedback/feedback",
+    "pages/center/protocol/protocol",
+    "pages/center/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

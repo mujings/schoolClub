@@ -10,4 +10,10 @@ Page({
   onShow: function () {
 
   },
+
+  toUserInfo(e){
+    wx.navigateTo({
+      url: 'userInfo/userInfo'
+    });
+  }
 })

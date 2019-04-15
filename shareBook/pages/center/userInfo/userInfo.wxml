@@ -1,0 +1,19 @@
+<wux-cell-group>
+    <wux-cell title="姓名" hover-class="none">
+        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="姓名" />
+    </wux-cell>
+    <wux-cell title="手机号" hover-class="none">
+        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="手机号" type="number" />
+    </wux-cell>
+    <wux-cell title="学号" hover-class="none">
+        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="学号" type="number" />
+    </wux-cell>
+</wux-cell-group>
+
+<view class="imgBox pd20">
+    <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+    <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+</view>
+<view class="btnBox wux-mt--10">
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+</view>

@@ -1,13 +1,13 @@
-<view class="userInfo pd20 wux-light--bg wux-mb--20">
+<view class="userInfo pd20 wux-light--bg wux-mb--20" catch:tap="toUserInfo">
     <image class="head wux-mr--10" src="https://wux.cdn.cloverstd.com/logo.png" />
     <view>楼主</view>
 </view>
 
 <wux-cell-group>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="消息中心" is-link></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="修改付款密码" is-link></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="使用协议" is-link></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="反馈" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="消息中心" is-link url="message/message"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link url="integral/integral"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link url="record/record"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="修改付款密码" is-link url="changePw/changePw"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="使用协议" is-link url="protocol/protocol"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="反馈" is-link url="feedback/feedback"></wux-cell>
 </wux-cell-group>
