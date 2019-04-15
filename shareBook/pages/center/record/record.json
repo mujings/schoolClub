@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText":"我的记录",
+  "usingComponents": {
+    "wux-tabs": "../../../dist/tabs/index",
+    "wux-tab": "../../../dist/tab/index"}
 }

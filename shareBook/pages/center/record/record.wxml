@@ -1,2 +1,12 @@
-<!--pages/center/record/record.wxml-->
-<text>pages/center/record/record.wxml</text>
+ <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
+     <block wx:for="{{ tabs }}" wx:key="key">
+         <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
+     </block>
+ </wux-tabs>
+ <swiper current="{{ index }}" bindchange="onSwiperChange">
+     <block wx:for="{{ tabs }}" wx:key="key">
+         <swiper-item>
+             <view class="content">{{ item.content }}</view>
+         </swiper-item>
+     </block>
+ </swiper>
