@@ -12,6 +12,15 @@ Page({
 
   },
 
+  scanCode(e){
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
+        console.log(res)
+      }
+    })
+  },
+
   //选择图片
   choosePic: function() {
     let that = this;
@@ -72,6 +81,5 @@ Page({
         }
       }
     })
-
   },
 })

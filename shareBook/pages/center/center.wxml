@@ -4,7 +4,7 @@
 </view>
 
 <wux-cell-group>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的信息" is-link></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="消息中心" is-link></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="修改付款密码" is-link></wux-cell>
