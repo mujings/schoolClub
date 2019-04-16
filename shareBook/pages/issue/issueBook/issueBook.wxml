@@ -42,7 +42,7 @@
     </wux-cell>
     <wux-cell hover-class="none" title="交易方式">
         <view slot="footer">
-            <wux-tag color="#33CD5F">校内交易</wux-tag>
+            <wux-tag color="#33CD5F" wux-class="wux-mr--0">校内交易</wux-tag>
         </view>
     </wux-cell>
 </wux-cell-group>

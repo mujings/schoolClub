@@ -1,12 +1,158 @@
  <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
-     <block wx:for="{{ tabs }}" wx:key="key">
-         <wux-tab key="{{ item.key }}" title="{{ item.title }}"></wux-tab>
-     </block>
+     <wux-tab key="{{ 0 }}" title="借入"></wux-tab>
+     <wux-tab key="{{ 1 }}" title="借出"></wux-tab>
  </wux-tabs>
- <swiper current="{{ index }}" bindchange="onSwiperChange">
-     <block wx:for="{{ tabs }}" wx:key="key">
-         <swiper-item>
-             <view class="content">{{ item.content }}</view>
-         </swiper-item>
-     </block>
- </swiper>
+ <view class="box">
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+     <view class="content pd20 wux-light--bg wux-mt--1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <view>详情</view>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+ </view>
