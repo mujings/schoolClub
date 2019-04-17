@@ -1,10 +1,20 @@
 Page({
     data: {
-        scrollTop:0
+        scrollTop:0,
+        classId:'1',//分类id
     },
 
     onLoad() {
 
+    },
+
+    // 选择分类
+    selectClss(e){
+        let that = this;
+        let classId = e.currentTarget.id
+        that.setData({
+            classId
+        })
     },
 
     onPageScroll(e) {

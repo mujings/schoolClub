@@ -1,2 +1,14 @@
-<!--pages/center/changePw/changePw.wxml-->
-<text>pages/center/changePw/changePw.wxml</text>
+<wux-cell-group title="初始密码666666">
+    <wux-cell hover-class="none">
+        <wux-input label="当前密码" password type="number" placeholder="当前密码"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="新密码" placeholder="新密码" password type="number"/>
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <wux-input label="确认密码" placeholder="确认密码" password type="number"/>
+    </wux-cell>
+</wux-cell-group>
+<view class="btnBox wux-mt--20">
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+</view>

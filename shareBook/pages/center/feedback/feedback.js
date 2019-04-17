@@ -1,66 +1,94 @@
-// pages/feedback/feedback.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    fileList: [{
+      uid: 0,
+      status: 'uploading',
+      url: 'https://wux.cdn.cloverstd.com/qrcode.jpg',
+  },
+  {
+      uid: 1,
+      status: 'done',
+      url: 'https://wux.cdn.cloverstd.com/qrcode.jpg',
+  },
+  {
+      uid: 2,
+      status: 'error',
+      url: 'https://wux.cdn.cloverstd.com/qrcode.jpg',
+  }
+],
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
 
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  onChange(e) {
+    console.log('onChange', e)
+    const {
+      file
+    } = e.detail
+    if (file.status === 'uploading') {
+      this.setData({
+        progress: 0,
+      })
+      wx.showLoading()
+    } else if (file.status === 'done') {
+      this.setData({
+        imageUrl: file.url,
+      })
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  onSuccess(e) {
+    console.log('onSuccess', e)
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  onFail(e) {
+    console.log('onFail', e)
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  onComplete(e) {
+    console.log('onComplete', e)
+    wx.hideLoading()
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  onProgress(e) {
+    console.log('onProgress', e)
+    this.setData({
+      progress: e.detail.file.progress,
+    })
+  },
 
+  onPreview(e) {
+    console.log('onPreview', e)
+    const {
+      file,
+      fileList
+    } = e.detail
+    wx.previewImage({
+      current: file.url,
+      urls: fileList.map((n) => n.url),
+    })
+  },
+
+  onRemove(e) {
+    const {
+      file,
+      fileList
+    } = e.detail
+    wx.showModal({
+      content: '确定删除？',
+      success: (res) => {
+        if (res.confirm) {
+          this.setData({
+            fileList: fileList.filter((n) => n.uid !== file.uid),
+          })
+        }
+      },
+    })
   }
 })

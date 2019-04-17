@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -114,6 +114,40 @@
 					"name": "我的记录",
 					"pathName": "pages/center/record/record",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "记录详情",
+					"pathName": "pages/center/recordDetail/recordDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改密码",
+					"pathName": "pages/center/changePw/changePw",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈",
+					"pathName": "pages/center/feedback/feedback",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "使用协议",
+					"pathName": "pages/center/protocol/protocol",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "消息中心",
+					"pathName": "pages/center/message/message",
 					"scene": null
 				}
 			]

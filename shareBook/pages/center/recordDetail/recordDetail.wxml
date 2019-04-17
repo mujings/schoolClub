@@ -1,2 +1,45 @@
-<!--pages/center/recordDetail/recordDetail.wxml-->
-<text>pages/center/recordDetail/recordDetail.wxml</text>
+<view class="bookInfo wux-light--bg pd20 mb1">
+    <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+    <view class="right">
+        <view>杯中窥人</view>
+        <view>韩寒</view>
+        <view>作家出版社</view>
+        <view>66积分</view>
+    </view>
+</view>
+<view class="sellerInfo wux-light--bg pd20 mb1">
+    <view class="wux-mb--5 itemNav">
+        <text space="emsp">卖 家：</text>
+        <navigator class='wux-balanced' url="../../index/userDetail/userDetail">路人</navigator>
+    </view>
+    <view>
+        <view class="wux-mb--5">发布时间：2019.09.09 12:03
+        </view>
+        <view class="">联系方式：18819842389
+        </view>
+    </view>
+</view>
+<view class="buyerInfo wux-light--bg pd20 mb1">
+    <view class="wux-mb--5 itemNav">
+        <text space="emsp">买 家：</text>
+        <navigator class='wux-balanced' url="../../index/userDetail/userDetail">我不是路人</navigator>
+    </view>
+    <view class="wux-mb--5">发布时间：2019.09.09 12:03
+    </view>
+    <view class="">联系方式：18819842389
+    </view>
+</view>
+<view class="orderInfo wux-light--bg pd20">
+    <view class="wux-mb--5 itemNav">
+        <text space="emsp">订单号 ：</text>kt666
+    </view>
+    <view class="wux-mb--5">交易方式：学校面交
+    </view>
+    <view class="">交易状态：交易进行中
+    </view>
+</view>
+<view class="bottomBtn btnBox">
+    <view class="wux-energized--bg wux-light btn">举报</view>
+    <view class="wux-assertive--bg wux-light  btn">取消订单</view>
+    <view class="wux-balanced--bg wux-light  btn">确认交易成功</view>
+</view>

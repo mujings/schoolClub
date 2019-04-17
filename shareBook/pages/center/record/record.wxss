@@ -11,7 +11,7 @@ page .box{
 }
 
 .content image {
-    width: 180rpx;
+    width: 175rpx;
     height: 250rpx;
 }
 

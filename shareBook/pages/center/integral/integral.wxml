@@ -15,6 +15,6 @@
     <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
     <wux-cell title="完善信息" label="2019-05-02 12:12" extra="+100"></wux-cell>
 </wux-cell-group>
-<navigator class="wux-balanced--bg wux-light bottomBtn">
+<navigator class="wux-balanced--bg wux-light bottomBtn" hover-class="none" url="../recharge/recharge">
     积分充值
 </navigator>

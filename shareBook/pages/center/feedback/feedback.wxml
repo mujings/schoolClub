@@ -1,2 +1,16 @@
-<!--pages/feedback/feedback.wxml-->
-<text>pages/feedback/feedback.wxml</text>
+<view class="pd20 wux-light--bg">
+    <wux-textarea label="反馈内容" placeholder="反馈内容" focus hasCount rows="{{5}}" />
+</view>
+<view class="pd20 wux-light--bg">
+    <wux-upload listType="picture-card" fileList="{{ fileList }}" controlled url=""
+        bind:change="onChange" bind:success="onSuccess" bind:fail="onFail" bind:complete="onComplete"
+        bind:preview="onPreview" bind:remove="onRemove">
+        <text>上传</text>
+    </wux-upload>
+</view>
+<view class="pd20 wux-light--bg">
+    <wux-input label="联系方式" placeholder="联系方式" />
+</view>
+<view class="btnBox wux-mt--20">
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+</view>

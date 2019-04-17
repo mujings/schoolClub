@@ -1,1 +1,3 @@
-/* pages/center/recharge/recharge.wxss */
+.wux-balanced--bg .wux-grid__label{
+    color: #fff
+}

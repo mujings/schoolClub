@@ -1,1 +1,8 @@
-/* pages/feedback/feedback.wxss */
+.btnBox{
+    display: flex;
+    justify-content: center
+}
+
+.btn{
+    width: 250rpx;
+}

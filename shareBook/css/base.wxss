@@ -25,6 +25,11 @@ button:after {
     margin-bottom: 100rpx
 }
 
+/* 分割线 */
+.mb1{
+    margin-bottom: 1rpx
+}
+
 input {
     font-size: 28rpx;
 }
@@ -35,7 +40,7 @@ input {
 }
 
 .cold {
-    color: #444
+    color: #808080
 }
 
 /* 字体大小 */

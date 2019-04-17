@@ -1,0 +1,7 @@
+<wux-dialog id="wux-dialog" />
+<wux-grids col="{{2}}">
+            <wux-grid wux-class="wux-balanced--bg" label="200积分/1元" bind:click="recharge"/>
+            <wux-grid wux-class="wux-balanced--bg" label="200积分/1元" />
+            <wux-grid wux-class="wux-balanced--bg" label="200积分/1元" />
+            <wux-grid wux-class="wux-balanced--bg" label="200积分/1元" />
+</wux-grids>

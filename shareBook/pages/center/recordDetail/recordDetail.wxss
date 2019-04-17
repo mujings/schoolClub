@@ -1,1 +1,25 @@
-/* pages/center/recordDetail/recordDetail.wxss */
+.bookInfo{
+    display: flex
+}
+
+.bookInfo image{
+    width: 175rpx;
+    height: 250rpx;
+}
+.bookInfo .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around
+}
+
+.itemNav{
+    display: flex
+}
+
+.btnBox{
+    display: flex
+}
+
+.btnBox .btn{
+    flex: 1
+}

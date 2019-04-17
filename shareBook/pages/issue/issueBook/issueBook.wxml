@@ -13,7 +13,7 @@
         <wux-input label="价格" placeholder="价格" type="number" />
     </wux-cell>
     <wux-cell hover-class="none">
-        <wux-textarea rows="3" label="备注" hasCount placeholder="描述一下你的书本吧" />
+        <wux-textarea rows="4" label="备注" hasCount placeholder="描述一下你的书本吧" />
     </wux-cell>
     <wux-cell>
         <view class="img_box">

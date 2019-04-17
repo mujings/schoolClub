@@ -1,2 +1,3 @@
-<!--pages/center/protocol/protocol.wxml-->
-<text>pages/center/protocol/protocol.wxml</text>
+<view class="pd20">
+    使用协议
+</view>

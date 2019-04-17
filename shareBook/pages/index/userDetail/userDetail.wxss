@@ -22,7 +22,7 @@
 }
 
 .item .itemImg {
-    width: 140rpx;
-    height: 180rpx;
+    width: 175rpx;
+    height: 250rpx;
     margin-right: 20rpx;
 }

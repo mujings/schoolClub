@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText":"积分充值",
-  "usingComponents": {}
+  "usingComponents": {
+    "wux-grids": "../../../dist/grids/index",
+    "wux-grid": "../../../dist/grid/index",
+    "wux-dialog": "../../../dist/dialog/index"}
 }

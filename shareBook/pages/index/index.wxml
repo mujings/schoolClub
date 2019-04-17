@@ -3,14 +3,11 @@
     <wux-sticky-item>
         <scroll-view slot="title" class="classify wux-light--bg" scroll-x="{{true}}" scroll-with-animation="{{true}}">
             <view class="classifyBox">
-                <view class="classifyItem wux-balanced">计算机</view>
-                <view class="classifyItem">土木工程</view>
-                <view class="classifyItem">交通</view>
-                <view class="classifyItem">通讯工程</view>
-                <view class="classifyItem">计算机</view>
-                <view class="classifyItem">土木工程</view>
-                <view class="classifyItem">交通</view>
-                <view class="classifyItem">通讯工程</view>
+                <view class="{{classId == '1'?'classifyItem wux-balanced':'classifyItem'}}" id="1" catch:tap="selectClss">计算机</view>
+                <view class="{{classId == '2'?'classifyItem wux-balanced':'classifyItem'}}" id="2" catch:tap="selectClss">计算机</view>
+                <view class="{{classId == '3'?'classifyItem wux-balanced':'classifyItem'}}" id="3" catch:tap="selectClss">计算机</view>
+                <view class="{{classId == '4'?'classifyItem wux-balanced':'classifyItem'}}" id="4" catch:tap="selectClss">计算机</view>
+                <view class="{{classId == '5'?'classifyItem wux-balanced':'classifyItem'}}" id="5" catch:tap="selectClss">计算机</view>
             </view>
         </scroll-view>
         <view slot="content" class="articleBox">

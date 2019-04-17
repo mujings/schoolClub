@@ -1,2 +1,15 @@
-<!--pages/center/message/message.wxml-->
-<text>pages/center/message/message.wxml</text>
+<view class="pd20 wux-light--bg mb1">
+    <view class="">消息标题</view>
+    <view class="cold">消息内容消息内容</view>
+    <view class="wux-text--right fz24 cold">2019</view>
+</view>
+<view class="pd20 wux-light--bg  mb1">
+    <view class="">消息标题</view>
+    <view class="cold">消息内容消息内容</view>
+    <view class="wux-text--right fz24 cold">2019</view>
+</view>
+<view class="pd20 wux-light--bg  mb1">
+    <view class="">消息标题</view>
+    <view class="cold">消息内容消息内容</view>
+    <view class="wux-text--right fz24 cold">2019</view>
+</view>
