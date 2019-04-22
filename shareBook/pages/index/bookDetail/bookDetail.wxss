@@ -5,7 +5,10 @@
 .bookInfo {
     margin-top: 2px;
 }
-
+.bookInfo .title{
+    display: flex;
+    justify-content: space-between
+}
 .bookInfo .bottom {
     padding: 0 20rpx 20rpx 20rpx;
     display: flex;

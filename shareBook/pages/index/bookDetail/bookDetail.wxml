@@ -4,15 +4,17 @@
     </swiper-item>
 </swiper>
 <view class="bookInfo wux-light--bg">
-    <view class="title fz36 pd20">编程</view>
+    <view class="title pd20"><view class="fz36">编程编程编程编程编程编程编程编程编程编程编程编程</view><wux-tag color="#33CD5F" wux-class="wux-mr--0">举报违规</wux-tag>
+    </view>
     <view class="bottom">
         <view>老周</view>
         <view>作家出版社</view>
         <view>199积分</view>
     </view>
 </view>
-<view class="tabBox pd20">
-    <wux-tag color="#33CD5F">校内交易</wux-tag>
+<view class="tabBox pd20 wux-light--bg">
+    <view>交易方式：校内交易</view>
+    <view>剩余数量：6</view>
 </view>
 <view class="commentBox pd20 wux-light--bg">
     <image class="head" catch:tap="toUserDetail" src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
@@ -22,6 +24,6 @@
     </view>
 </view>
 <view class="btnBox colw">
-    <view class="wux-assertive--bg" catch:tap="toReport">举报违规</view>
+    
     <view class="wux-balanced--bg" catch:tap="toOrder">立即交易</view>
 </view>
