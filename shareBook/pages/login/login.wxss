@@ -1,0 +1,16 @@
+.btn{
+    color: white;
+    border-radius: 50rpx;
+    width: 300rpx;
+    font-size: 32rpx;
+}
+
+.headBox{
+    margin: 30rpx 0rpx;
+    display: flex;
+    justify-content: center
+}
+
+.cardBox{
+    margin: 200rpx 50rpx 100rpx;
+}

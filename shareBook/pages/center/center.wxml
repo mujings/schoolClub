@@ -7,7 +7,7 @@
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="消息中心" is-link url="message/message"></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link url="integral/integral"></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link url="record/record"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="修改付款密码" is-link url="changePw/changePw"></wux-cell>
+    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的发布" is-link url="myIssue/myIssue"></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="使用协议" is-link url="protocol/protocol"></wux-cell>
     <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="反馈" is-link url="feedback/feedback"></wux-cell>
 </wux-cell-group>

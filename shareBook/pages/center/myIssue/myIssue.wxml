@@ -1,0 +1,21 @@
+ <view class="box">
+     <view class="content pd20 wux-light--bg mb1">
+         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+         <view class="right">
+             <view class="title">
+                 <view>杯中窥人</view>
+                 <navigator url='../recordDetail/recordDetail' hover-class='none' class='wux-balanced'>详情</navigator>
+             </view>
+             <view>
+                 ke888
+             </view>
+             <view>
+                 交易方式：校内面交
+             </view>
+             <view class="status">
+                 <view>2019.03.03 12:03</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+             </view>
+         </view>
+     </view>
+ </view>

@@ -1,0 +1,22 @@
+.content {
+    display: flex
+}
+
+.content image {
+    width: 175rpx;
+    height: 250rpx;
+}
+
+.content .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1
+}
+
+.content .title,
+.status {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}

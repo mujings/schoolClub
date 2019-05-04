@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
     "pages/issue/issue",
     "pages/center/center",
@@ -13,10 +14,11 @@
     "pages/center/recharge/recharge",
     "pages/center/record/record",
     "pages/center/recordDetail/recordDetail",
-    "pages/center/changePw/changePw",
     "pages/center/feedback/feedback",
     "pages/center/protocol/protocol",
-    "pages/center/message/message"
+    "pages/center/message/message",
+    "pages/center/myIssue/myIssue",
+    "pages/center/issueDetail/issueDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -40,5 +42,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

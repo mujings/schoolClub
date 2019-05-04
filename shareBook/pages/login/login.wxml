@@ -1,0 +1,6 @@
+<view class="cardBox">
+    <image class="" src="https://wux.cdn.cloverstd.com/logo.png" mode=""></image>
+</view>
+<view class="headBox">
+    <button class='btn' open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="wux-balanced--bg wux-light">微信登录</button>
+</view>

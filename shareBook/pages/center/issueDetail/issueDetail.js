@@ -1,4 +1,4 @@
-// pages/center/changePw/changePw.js
+// pages/center/issueDetail/issueDetail.js
 Page({
 
   /**

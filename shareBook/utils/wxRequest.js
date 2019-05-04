@@ -3,9 +3,7 @@ import {
 } from "./tip";
 const app = getApp();
 
-var http = 'http://192.168.1.124:8080/kooun-hongkedou-user'; //
-
-// var http = 'https://hongkedou.user.infotoo.com.cn/kooun-hongkedou-user';//正式域名
+var http = 'http://user.xyshare.top/sucaigongxiang-user';//正式域名
 
 var httpUpload = 'https://hongkedou.file.infotoo.com.cn/kooun-file/file/pic/upload.wx';
 

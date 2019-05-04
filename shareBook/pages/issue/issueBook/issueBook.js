@@ -1,20 +1,30 @@
+import { wxRequest } from "../../../utils/wxRequest";
 Page({
   data: {
     images: [],
     picIds : [] , //图片id
+    array: ['美国', '中国', '巴西', '日本'],
+    index:0
   },
 
   onLoad: function (options) {
+    wxRequest('/category/categoeys.wx',{parentId:0},function(res){
 
+    })
   },
 
   onShow: function () {
 
   },
 
+  submit(res){
+    console.log(res)
+  },
+
   scanCode(e){
     wx.scanCode({
       onlyFromCamera: true,
+      scanType:['barCode'],
       success(res) {
         console.log(res)
       }

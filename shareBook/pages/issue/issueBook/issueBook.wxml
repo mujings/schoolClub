@@ -1,7 +1,7 @@
+<form>
 <wux-cell-group title="图书信息">
     <wux-cell hover-class="none">
-        <wux-input label="书名" placeholder="书名" defaultValue="可扫码获取图书信息" focus/>
-        <wux-icon  slot="footer" type="md-barcode" catch:tap="scanCode"/>
+        <wux-input label="书名" placeholder="书名" focus/>
     </wux-cell>
     <wux-cell hover-class="none">
         <wux-input label="作者" placeholder="作者" />
@@ -11,6 +11,11 @@
     </wux-cell>
     <wux-cell hover-class="none">
         <wux-input label="价格" placeholder="价格" type="number" />
+    </wux-cell>
+    <wux-cell hover-class="none">
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+        <wux-input label="分类" placeholder="计算机类" value="{{array[index]}}"/>
+  </picker>
     </wux-cell>
     <wux-cell hover-class="none">
         <wux-textarea rows="4" label="备注" hasCount placeholder="描述一下你的书本吧" />
@@ -47,5 +52,6 @@
     </wux-cell>
 </wux-cell-group>
 <view class="btnBox wux-mt--20">
-    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" formType="submit">提交</wux-button>
 </view>
+</form>
