@@ -1,1 +1,45 @@
-/* pages/center/issueDetail/issueDetail.wxss */
+.slide-image {
+    width: 100%;
+}
+
+.bookInfo {
+    margin-top: 2px;
+}
+.bookInfo .title{
+    display: flex;
+    justify-content: space-between
+}
+.bookInfo .bottom {
+    padding: 0 20rpx 20rpx 20rpx;
+    display: flex;
+    justify-content: space-between
+}
+
+.commentBox .head {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%
+}
+
+.commentBox {
+    display: flex;
+    margin-bottom: 100rpx;
+}
+
+.commentBox .right {
+    margin-left: 20rpx;
+}
+
+.btnBox {
+    /* display: flex; */
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.btnBox view {
+    /* width: 50%; */
+}

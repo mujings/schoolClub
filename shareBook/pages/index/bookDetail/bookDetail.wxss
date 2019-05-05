@@ -31,7 +31,7 @@
 }
 
 .btnBox {
-    display: flex;
+    /* display: flex; */
     height: 100rpx;
     line-height: 100rpx;
     text-align: center;
@@ -41,5 +41,5 @@
 }
 
 .btnBox view {
-    width: 50%;
+    /* width: 50%; */
 }

@@ -4,7 +4,7 @@
          <view class="right">
              <view class="title">
                  <view>杯中窥人</view>
-                 <navigator url='../recordDetail/recordDetail' hover-class='none' class='wux-balanced'>详情</navigator>
+                 <navigator url='../issueDetail/issueDetail' hover-class='none' class='wux-balanced'>详情</navigator>
              </view>
              <view>
                  ke888
@@ -14,7 +14,7 @@
              </view>
              <view class="status">
                  <view>2019.03.03 12:03</view>
-                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">已借出3本</wux-tag>
              </view>
          </view>
      </view>

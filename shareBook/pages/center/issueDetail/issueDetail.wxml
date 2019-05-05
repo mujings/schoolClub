@@ -1,2 +1,29 @@
-<!--pages/center/issueDetail/issueDetail.wxml-->
-<text>pages/center/issueDetail/issueDetail.wxml</text>
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" circular="{{true}}">
+    <swiper-item wx:for="{{imgUrls}}">
+        <image src="{{item}}" class="slide-image" id="{{index}}" bind:tap="showImg" />
+    </swiper-item>
+</swiper>
+<view class="bookInfo wux-light--bg">
+    <view class="title pd20"><view class="fz36">编程编程编程编程编程编程编程编程编程编程编程编程</view>
+    </view>
+    <view class="bottom">
+        <view>老周</view>
+        <view>作家出版社</view>
+    </view>
+</view>
+<view class="tabBox pd20 wux-light--bg wux-mt--10 wux-mb--10">
+    <view>交易方式：校内交易</view>
+    <view>199积分</view>
+    <view>总数量：6</view>
+    <view>剩余数量：5</view>
+</view>
+<view class="commentBox pd20 wux-light--bg">
+    <image class="head" catch:tap="toUserDetail" src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+    <view class="right">
+        <view class="fz32" catch:tap="toUserDetail">楼主</view>
+        <view>九五新</view>
+    </view>
+</view>
+<view class="btnBox colw">
+    <view class="wux-assertive--bg" catch:tap="toOrder">取消发布</view>
+</view>
