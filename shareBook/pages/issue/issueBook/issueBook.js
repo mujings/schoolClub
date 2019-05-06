@@ -1,25 +1,38 @@
 import { wxRequest } from "../../../utils/wxRequest";
+import { wxRequestUpload } from "../../../utils/wxRequest";
+let picIds = [];//图片id
+let bookNum = 1;//图书数量
 Page({
   data: {
     images: [],
-    picIds : [] , //图片id
-    array: ['美国', '中国', '巴西', '日本'],
+    array: [],
     index:0
   },
 
   onLoad: function (options) {
-    // wxRequest('/category/categoeys.wx',{parentId:0},function(res){
-
-    // })
+    let that = this;
+    wxRequest('/category/categoeys.wx',{parentId:0},function(res){
+      that.setData({
+        array:res.data.result
+      })
+    })
   },
 
   onShow: function () {
 
   },
 
+  // 表单提交
   formSubmit:function(res){
     console.log(res)
   },
+
+  //书本数量
+  numChange(res){
+    bookNum = res.detail.value
+  },
+
+
 
   //选择图片
   choosePic: function() {
@@ -39,25 +52,22 @@ Page({
 
   //上传图片
   uploadPic: function(img) {
-    let that = this, urls = that.data.images, urlIds = that.data.picIds;
+    let that = this, urls = that.data.images;
 
     wxRequestUpload(img, function(res) {
         console.log('上传图片-----');        
         console.log(JSON.parse(res.data))
         let mydata = JSON.parse(res.data);
         urls.push(mydata.result.url)
-        urlIds.push(mydata.result.urlId);       
+        picIds.push(mydata.result.urlId);       
 
-        if(mydata.status == 'success'){        
-          console.log(urlIds);
+        if(mydata.status == 'success'){
           console.log(urls);
           that.setData({
-            images: urls,
-            picIds: urlIds
+            images: urls
           })
         }
-      })  
-    
+      })
   },
 
 
@@ -77,9 +87,9 @@ Page({
           that.setData({
             images: pic
           })
-          that.data.picIds.splice(id, 1);
+          picIds.splice(id, 1);
         }
       }
     })
-  },
+  }
 })

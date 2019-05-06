@@ -5,7 +5,6 @@ import {
 import {
   wxRequest
 } from "../../utils/wxRequest";
-let code;
 Page({
   data: {},
 
@@ -19,17 +18,7 @@ Page({
           wx.getUserInfo({
             success: res => {
               appInst.globalData.userInfo = res.userInfo;
-              wx.login({
-                success: (result) => {
-                  code = result.code
-                  wxRequest('/userLogin/getOpenId.wx',{code:code},function(res){
-                    console.log(res)
-                    // wx.switchTab({
-                    //   url: '../index/index',
-                    // });
-                  })
-                }
-              })
+              that.login();
             }
           })
         }
@@ -41,19 +30,34 @@ Page({
     let that = this;
     if (e.detail.userInfo) {
       appInst.globalData.userInfo = e.detail.userInfo;
-      setTimeout(function () {
-        that.login()
-      }, 500)
+      that.login()
     }
   },
 
   login: function () {
-    let that = this;
-    wx.switchTab({
-      url: '../index/index',
-    });
-    // wxRequest('/userLogin/wechatLogin.wx',{},function(res){
-
-    // })
+    wx.login({
+      success: (result) => {
+        wxRequest('/userLogin/getOpenId.wx', {
+          code: result.code
+        }, function (res) {
+          let userJson = {
+            userInfo: appInst.globalData.userInfo,
+            openId: res.data.openId
+          }
+          wxRequest('/userLogin/wechatLogin.wx', {
+            userJson: JSON.stringify(userJson)
+          }, function (res) {
+            if (res.data.status == 'success') {
+              appInst.globalData.userkey = res.data.userkey
+              wx.switchTab({
+                url: '../index/index',
+              });
+            } else {
+              tips.toast(res.data.message)
+            }
+          })
+        })
+      }
+    })
   }
 })

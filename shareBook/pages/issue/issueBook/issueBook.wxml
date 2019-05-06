@@ -1,10 +1,10 @@
 <form bindsubmit="formSubmit">
     <wux-cell-group title="图书信息">
         <wux-cell hover-class="none">
-            <view class="inputBox">书名：<input placeholder="书名" focus name="bookName" /></view>
+            <view class="inputBox">书名：<input placeholder="书名" focus name="name" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <view class="inputBox">作者：<input placeholder="作者" name="" /></view>
+            <view class="inputBox">作者：<input placeholder="作者" name="author" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
             <view class="inputBox">出版社：<input placeholder="出版社" name="" /></view>
@@ -13,9 +13,9 @@
             <view class="inputBox">价格：<input placeholder="价格" name="" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="fenlei">
-                <view class="inputBox">分类：<input placeholder="计算机类" name="" value="{{array[index]}}"
-                        disabled="{{true}}" /></view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" name="fenlei">
+                <view class="inputBox">分类：<input placeholder="计算机类" name="" value="{{array[index].name}}"
+                    disabled="{{true}}"/></view>
             </picker>
         </wux-cell>
         <wux-cell hover-class="none">
@@ -38,7 +38,7 @@
 
 <wux-cell-group title="交易信息">
     <wux-cell hover-class="none" title="数量">
-        <wux-input-number slot="footer" shape="circle" color="balanced" slot="footer" min="1" max="3" />
+        <wux-input-number slot="footer" shape="circle" color="balanced" slot="footer" min="1" bind:change="numChange"/>
     </wux-cell>
     <wux-cell hover-class="none">
         <view class="inputBox">积分：<input placeholder="书本所需积分（单价）" name="" type="number"/></view>
@@ -54,6 +54,6 @@
 </wux-cell-group>
 <view class="btnBox wux-mt--20">
     <!-- <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" formType="submit">提交</wux-button> -->
-    <button class="btn" form-type="submit">提交</button>
+    <button class="btn wux-balanced--bg wux-light" form-type="submit">提交</button>
 </view>
 </form>
