@@ -8,27 +8,17 @@ Page({
   },
 
   onLoad: function (options) {
-    wxRequest('/category/categoeys.wx',{parentId:0},function(res){
+    // wxRequest('/category/categoeys.wx',{parentId:0},function(res){
 
-    })
+    // })
   },
 
   onShow: function () {
 
   },
 
-  submit(res){
+  formSubmit:function(res){
     console.log(res)
-  },
-
-  scanCode(e){
-    wx.scanCode({
-      onlyFromCamera: true,
-      scanType:['barCode'],
-      success(res) {
-        console.log(res)
-      }
-    })
   },
 
   //选择图片

@@ -12,11 +12,6 @@ Page({
   onLoad: function (options) {
     let that = this;
     // 获取用户信息
-    wx.login({
-      success: (result) => {
-        code = result.code
-      }
-    })
     wx.getSetting({
       success: res => {
         if (res.authSetting['scope.userInfo']) {
@@ -24,9 +19,17 @@ Page({
           wx.getUserInfo({
             success: res => {
               appInst.globalData.userInfo = res.userInfo;
-              wx.switchTab({
-                url: '../index/index',
-              });
+              wx.login({
+                success: (result) => {
+                  code = result.code
+                  wxRequest('/userLogin/getOpenId.wx',{code:code},function(res){
+                    console.log(res)
+                    // wx.switchTab({
+                    //   url: '../index/index',
+                    // });
+                  })
+                }
+              })
             }
           })
         }

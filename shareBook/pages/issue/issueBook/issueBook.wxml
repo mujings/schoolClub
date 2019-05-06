@@ -1,38 +1,39 @@
-<form>
-<wux-cell-group title="图书信息">
-    <wux-cell hover-class="none">
-        <wux-input label="书名" placeholder="书名" focus/>
-    </wux-cell>
-    <wux-cell hover-class="none">
-        <wux-input label="作者" placeholder="作者" />
-    </wux-cell>
-    <wux-cell hover-class="none">
-        <wux-input label="出版社" placeholder="出版社" />
-    </wux-cell>
-    <wux-cell hover-class="none">
-        <wux-input label="价格" placeholder="价格" type="number" />
-    </wux-cell>
-    <wux-cell hover-class="none">
-        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-        <wux-input label="分类" placeholder="计算机类" value="{{array[index]}}"/>
-  </picker>
-    </wux-cell>
-    <wux-cell hover-class="none">
-        <wux-textarea rows="4" label="备注" hasCount placeholder="描述一下你的书本吧" />
-    </wux-cell>
-    <wux-cell>
-        <view class="img_box">
-            <view class="img_box_tip">添加图片(最多添加6张)</view>
-            <view class="picture">
-                <scroll-view class="sv" scroll-x>
-                    <image wx:for="{{images}}" bindtap='delPic' data-id="{{index}}" wx:key="{{index}}"
-                        class="pictureUrl" src="{{item}}"></image>
-                    <image style='width: 210rpx;height: 210rpx;' src='../../../img/upload1.png'
-                        wx:if="{{images.length<6}}" class="choosePic" bindtap="choosePic"></image>
-                </scroll-view>
+<form bindsubmit="formSubmit">
+    <wux-cell-group title="图书信息">
+        <wux-cell hover-class="none">
+            <view class="inputBox">书名：<input placeholder="书名" focus name="bookName" /></view>
+        </wux-cell>
+        <wux-cell hover-class="none">
+            <view class="inputBox">作者：<input placeholder="作者" name="" /></view>
+        </wux-cell>
+        <wux-cell hover-class="none">
+            <view class="inputBox">出版社：<input placeholder="出版社" name="" /></view>
+        </wux-cell>
+        <wux-cell hover-class="none">
+            <view class="inputBox">价格：<input placeholder="价格" name="" /></view>
+        </wux-cell>
+        <wux-cell hover-class="none">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" name="fenlei">
+                <view class="inputBox">分类：<input placeholder="计算机类" name="" value="{{array[index]}}"
+                        disabled="{{true}}" /></view>
+            </picker>
+        </wux-cell>
+        <wux-cell hover-class="none">
+            <view class="inputBox">备注：<textarea auto-height placeholder="描述一下你的书本吧" name="beizhu" /></view>
+        </wux-cell>
+        <wux-cell>
+            <view class="img_box">
+                <view class="img_box_tip">添加图片(最多添加6张)</view>
+                <view class="picture">
+                    <scroll-view class="sv" scroll-x>
+                        <image wx:for="{{images}}" bindtap='delPic' data-id="{{index}}" wx:key="{{index}}"
+                            class="pictureUrl" src="{{item}}"></image>
+                        <image style='width: 210rpx;height: 210rpx;' src='../../../img/upload1.png'
+                            wx:if="{{images.length<6}}" class="choosePic" bindtap="choosePic"></image>
+                    </scroll-view>
+                </view>
             </view>
-        </view>
-    </wux-cell>
+        </wux-cell>
 </wux-cell-group>
 
 <wux-cell-group title="交易信息">
@@ -40,10 +41,10 @@
         <wux-input-number slot="footer" shape="circle" color="balanced" slot="footer" min="1" max="3" />
     </wux-cell>
     <wux-cell hover-class="none">
-        <wux-input label="积分" placeholder="书本所需积分（单价）" />
+        <view class="inputBox">积分：<input placeholder="书本所需积分（单价）" name="" type="number"/></view>
     </wux-cell>
     <wux-cell hover-class="none">
-        <wux-input label="联系方式" placeholder="联系方式" />
+    <view class="inputBox">手机：<input placeholder="联系方式" name="" type="number" maxlength="11"/></view>
     </wux-cell>
     <wux-cell hover-class="none" title="交易方式">
         <view slot="footer">
@@ -52,6 +53,7 @@
     </wux-cell>
 </wux-cell-group>
 <view class="btnBox wux-mt--20">
-    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" formType="submit">提交</wux-button>
+    <!-- <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" formType="submit">提交</wux-button> -->
+    <button class="btn" form-type="submit">提交</button>
 </view>
 </form>
