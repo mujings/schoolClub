@@ -3,8 +3,9 @@ import {
 } from "./tip";
 const app = getApp();
 
-var http = 'http://user.xyshare.top/sucaigongxiang-user';//正式域名
+// var http = 'http://user.xyshare.top/sucaigongxiang-user';//正式域名
 var http = 'http://47.103.75.229:8080/sucaigongxiang-user';
+// var http = 'http://192.168.1.244/sucaigongxiang-user';
 
 var httpUpload = 'https://hongkedou.file.infotoo.com.cn/kooun-file/file/pic/upload.wx';
 
@@ -22,19 +23,29 @@ function wxRequest(url, data, callback) {
         success(res) {
             tips.loaded()
             if (res.statusCode == 200) {
-                if (res.data.status == '401') {
+                if (res.data.status == 'success') {
+                    typeof callback == "function" && callback(res);
+                } else if (res.data.status == '401') {
                     tips.confirm(res.data.message).then(
                         function (res) { //确定
                             wx.navigateTo({
-                                url: '/pages/login/login'
+                                url: '/pages/login/login?type=' + 1
                             });
                         },
                         function (res) { //取消
 
                         });
-                } else if(res.data.status == 'success'){
-                    typeof callback == "function" && callback(res);
-                }else{
+                } else if (res.data.status == '403') {
+                    tips.confirm(res.data.message).then(
+                        function (res) { //确定
+                            wx.navigateTo({
+                                url: '/pages/center/userInfo/userInfo?type=' + 1
+                            });
+                        },
+                        function (res) { //取消
+
+                        });
+                } else {
                     tips.toast(res.data.message)
                 }
             } else {

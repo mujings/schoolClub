@@ -43,6 +43,7 @@ Page({
     json.pic = ["https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"]
     json.number = bookNum;
     json.tradeWay = 1;
+    // console.log(json)
     wxRequest('/book/release.wx', {
       json: JSON.stringify(json),
       categoryId: categoryId

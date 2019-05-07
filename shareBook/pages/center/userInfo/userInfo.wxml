@@ -1,12 +1,12 @@
 <wux-cell-group>
     <wux-cell title="姓名" hover-class="none">
-        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="姓名" />
+        <wux-input slot="footer" placeholder-class="wux-text--right" controlled value="{{userInfo.nick_name}}" placeholder="姓名" bind:change="inputName"/>
     </wux-cell>
     <wux-cell title="手机号" hover-class="none">
-        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="手机号" type="number" />
+        <wux-input slot="footer" placeholder-class="wux-text--right" controlled value="{{userInfo.phone}}" placeholder="手机号" type="number" maxlength="11"  bind:change="inputPhone"/>
     </wux-cell>
     <wux-cell title="学号" hover-class="none">
-        <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="学号" type="number" />
+        <wux-input slot="footer" placeholder-class="wux-text--right" controlled value="{{userInfo.studentId}}" placeholder="学号" type="number"  maxlength="10"  bind:change="inputId"/>
     </wux-cell>
 </wux-cell-group>
 
@@ -15,5 +15,6 @@
     <image src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
 </view>
 <view class="btnBox wux-mt--10">
-    <wux-button wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交</wux-button>
+    <wux-button wx:if="{{userInfo.status == 0}}" wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交认证</wux-button>
+    <wux-button wx:if="{{userInfo.status == 10}}" wux-class="btn" loading="{{isLoad}}" type="balanced">认证审核中</wux-button>
 </view>

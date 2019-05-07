@@ -27,12 +27,18 @@ Page({
         userId: id,
         pageStart: pageStart
       }, function (res) {
-        if (bookArr.length == res.data.result.pageCount) {
+        if (bookArr.length == res.data.result.bookList.pageCount) {
           isOver = true
           tips.toast('已加载所有')
         } else {
-          pageStart = res.data.result.pageStart + 1
-          bookArr = bookArr.concat(res.data.result.data)
+          if (pageStart == 1) {
+            that.setData({
+              avatarUrl: res.data.result.avatarUrl,
+              nick_name: res.data.result.nick_name
+            })
+          }
+          pageStart++
+          bookArr = bookArr.concat(res.data.result.bookList.data)
           that.setData({
             bookArr: bookArr
           })

@@ -1,6 +1,6 @@
 <view class="head pd20">
     <image class="headImg"
-        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+        src="{{avatarUrl}}" />
     <view>{{nick_name}}</view>
 </view>
 <view class="wux-light--bg content mb100">
