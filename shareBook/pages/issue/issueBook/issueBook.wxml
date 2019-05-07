@@ -13,13 +13,14 @@
             <view class="inputBox">价格：<input placeholder="价格" name="" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" name="fenlei">
-                <view class="inputBox">分类：<input placeholder="计算机类" name="" value="{{array[index].name}}"
-                    disabled="{{true}}"/></view>
-            </picker>
+            <view class="inputBox">分类：
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" name="fenlei">
+                    <input placeholder="计算机类" name="" value="{{array[index].name}}" disabled="{{true}}" />
+                </picker>
+            </view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <view class="inputBox">备注：<textarea auto-height placeholder="描述一下你的书本吧" name="beizhu" /></view>
+            <view class="inputBox"><view class="leftTip">备注：</view><textarea auto-height placeholder="描述一下你的书本吧" name="beizhu" /></view>
         </wux-cell>
         <wux-cell>
             <view class="img_box">
