@@ -11,6 +11,11 @@ Page({
 
   onLoad: function (options) {
     let that = this;
+    if (options.isbn) {
+      that.setData({
+        isbn:options.isbn
+      })
+    }
     wxRequest('/category/categoeys.wx',{parentId:0},function(res){
       that.setData({
         array:res.data.result

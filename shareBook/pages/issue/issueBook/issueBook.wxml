@@ -1,6 +1,9 @@
 <form bindsubmit="formSubmit">
     <wux-cell-group title="图书信息">
         <wux-cell hover-class="none">
+            <view class="inputBox">ISBN：<input value="{{isbn}}" name="isbnCode" disabled/></view>
+        </wux-cell>
+        <wux-cell hover-class="none">
             <view class="inputBox">书名：<input placeholder="书名" focus name="name" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
