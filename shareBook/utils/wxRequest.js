@@ -32,12 +32,10 @@ function wxRequest(url, data, callback) {
                         function (res) { //取消
 
                         });
-                } else if (res.data.status == 0) {
-                    wx.navigateTo({
-                        url: '/pages/weChatLogin?code=0'
-                    });
-                } else {
+                } else if(res.data.status == 'success'){
                     typeof callback == "function" && callback(res);
+                }else{
+                    tips.toast(res.data.message)
                 }
             } else {
                 tips.toast('系统繁忙');

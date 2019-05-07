@@ -106,9 +106,9 @@ Page({
     onReachBottom() {
         let that = this;
         if (that.data.classId == '') {
-            that.getBookListSearch(keyWord)
+            that.getBookListSearch()
         } else {
-            getBookList(that.data.classId)
+            getBookList()
         }
     },
 

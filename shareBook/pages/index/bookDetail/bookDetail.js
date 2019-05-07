@@ -33,14 +33,14 @@ Page({
   //用户详情
   toUserDetail(e) {
     wx.navigateTo({
-      url: '../userDetail/userDetail'
+      url: '../userDetail/userDetail?id='+e.currentTarget.id
     });
   },
 
   //下单
   toOrder(e) {
     wx.navigateTo({
-      url: '../order/order'
+      url: '../order/order?id='+e.currentTarget.id
     });
   },
 

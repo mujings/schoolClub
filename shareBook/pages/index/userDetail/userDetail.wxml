@@ -1,17 +1,17 @@
 <view class="head pd20">
     <image class="headImg"
         src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
-    <view>路人</view>
+    <view>{{nick_name}}</view>
 </view>
 <view class="wux-light--bg content mb100">
     <view class="cold">借出记录</view>
-    <view class="item">
+    <view class="item" wx:for="{{bookArr}}">
         <image class="itemImg"
-            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+            src="{{item.titlePic}}"
             mode="aspectFill" />
         <view class="right">
-            <view class="title fz32 wux-ellipsis">jsp</view>
-            <view class="info cold">666</view>
+            <view class="title fz32 wux-ellipsis">{{item.name}}</view>
+            <view class="info cold">{{item.notes}}</view>
         </view>
     </view>
 </view>

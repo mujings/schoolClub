@@ -47,14 +47,10 @@ Page({
           wxRequest('/userLogin/wechatLogin.wx', {
             userJson: JSON.stringify(userJson)
           }, function (res) {
-            if (res.data.status == 'success') {
               appInst.globalData.userkey = res.data.userkey
               wx.switchTab({
                 url: '../index/index',
               });
-            } else {
-              tips.toast(res.data.message)
-            }
           })
         })
       }

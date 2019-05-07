@@ -17,9 +17,9 @@
     <view>剩余数量：6</view>
 </view>
 <view class="commentBox pd20 wux-light--bg">
-    <image class="head" catch:tap="toUserDetail" src="{{bookInfo.avatarUrl}}" />
+    <image class="head" id="{{bookInfo.userId}}" catch:tap="toUserDetail" src="{{bookInfo.avatarUrl}}" />
     <view class="right">
-        <view class="fz32" catch:tap="toUserDetail">{{bookInfo.nick_name}}</view>
+        <view class="fz32 wux-balanced" id="{{bookInfo.userId}}" catch:tap="toUserDetail">{{bookInfo.nick_name}}</view>
         <view>{{bookInfo.notes}}</view>
     </view>
 </view>

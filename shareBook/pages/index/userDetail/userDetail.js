@@ -1,66 +1,50 @@
-// pages/index/userDetail/userDetail.js
+import {
+  wxRequest
+} from "../../../utils/wxRequest";
+import {
+  tips
+} from "../../../utils/tip";
+
+let isOver = false, //加载所有
+  pageStart = 1, //第几页开始加载
+  id = ''
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    bookArr: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    id = options.id;
+    this.getInfo()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getInfo() {
+    if (!isOver) {
+      let that = this;
+      let bookArr = that.data.bookArr;
+      wxRequest('/user/otherUser.wx', {
+        userId: id,
+        pageStart: pageStart
+      }, function (res) {
+        if (bookArr.length == res.data.result.pageCount) {
+          isOver = true
+          tips.toast('已加载所有')
+        } else {
+          pageStart = res.data.result.pageStart + 1
+          bookArr = bookArr.concat(res.data.result.data)
+          that.setData({
+            bookArr: bookArr
+          })
+        }
+      })
+    } else {
+      tips.toast('已加载所有')
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 上划加载更多
+  onReachBottom() {
+    this.getInfo()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

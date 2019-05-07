@@ -44,10 +44,10 @@ Page({
     json.number = bookNum;
     json.tradeWay = 1;
     wxRequest('/book/release.wx', {
-      json: json,
+      json: JSON.stringify(json),
       categoryId: categoryId
     }, function (res) {
-
+      
     })
   },
 
