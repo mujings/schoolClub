@@ -1,3 +1,7 @@
+import {
+  tips
+} from "../../utils/tip";
+
 Page({
   data: {
 
@@ -12,11 +16,20 @@ Page({
   },
 
   toIssueBook(e) {
-    wx.navigateTo({
-      url: 'issueBook/issueBook'
-    });
+    wx.scanCode({
+      onlyFromCamera: true,
+      success(res) {
+        if (res.scanType == "EAN_13") {
+          wx.navigateTo({
+            url: 'issueBook/issueBook?isbn=' + res.result
+          });
+        } else {
+          tips.toast('请扫描图书isbn码')
+        }
+      }
+    })
   },
-  
+
   toBegBook(e) {
     console.log('..')
   }
