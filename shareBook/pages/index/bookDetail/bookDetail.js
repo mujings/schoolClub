@@ -1,19 +1,20 @@
+import {
+  wxRequest
+} from "../../../utils/wxRequest";
 Page({
-
   data: {
-    imgUrls: [
-      'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
-      'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
-      'https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'
-    ],
+    
   },
 
   onLoad: function (options) {
-
-  },
-
-  onReady: function () {
-
+    let that = this;
+    wxRequest('/book/getBook.wx', {
+      bookId: options.id
+    }, function (res) {
+      that.setData({
+        bookInfo:res.data.result
+      })
+    })
   },
 
   onShow: function () {
@@ -29,18 +30,21 @@ Page({
     })
   },
 
+  //用户详情
   toUserDetail(e) {
     wx.navigateTo({
       url: '../userDetail/userDetail'
     });
   },
-  
+
+  //下单
   toOrder(e) {
     wx.navigateTo({
       url: '../order/order'
     });
   },
 
+  //举报书本
   toReport(e) {
     wx.navigateTo({
       url: '../reportBook/reportBook'

@@ -3,45 +3,25 @@
     <wux-sticky-item>
         <scroll-view slot="title" class="classify wux-light--bg" scroll-x="{{true}}" scroll-with-animation="{{true}}">
             <view class="classifyBox">
-                <view class="{{classId == '1'?'classifyItem wux-balanced':'classifyItem'}}" id="1" catch:tap="selectClss">计算机</view>
-                <view class="{{classId == '2'?'classifyItem wux-balanced':'classifyItem'}}" id="2" catch:tap="selectClss">计算机</view>
-                <view class="{{classId == '3'?'classifyItem wux-balanced':'classifyItem'}}" id="3" catch:tap="selectClss">计算机</view>
-                <view class="{{classId == '4'?'classifyItem wux-balanced':'classifyItem'}}" id="4" catch:tap="selectClss">计算机</view>
-                <view class="{{classId == '5'?'classifyItem wux-balanced':'classifyItem'}}" id="5" catch:tap="selectClss">计算机</view>
+                <view wx:for="{{array}}" class="{{classId == item.id?'classifyItem wux-balanced':'classifyItem'}}" id="{{item.id}}" catch:tap="selectClss">{{item.name}}</view>
             </view>
         </scroll-view>
         <view slot="content" class="articleBox">
-            <view class='articleItem wux-light--bg' bind:tap="toBookDetail">
+            <view wx:for="{{bookArr}}" class='articleItem wux-light--bg' bind:tap="toBookDetail" id="{{item.id}}">
                 <image mode="aspectFill" class="articleImg"
-                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
-                <view class="title wux-ellipsis fz32 pd10">jsp编程</view>
+                    src="{{item.titlePic}}" />
+                <view class="title wux-ellipsis fz32 pd10">{{item.name}}</view>
                 <view class="bottom pd10">
                     <image class="head" catch:tap="toUserDetail"
-                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+                        src="{{item.avatarUrl}}" />
                     <view class="right">
                         <view class="time fz24 wux-text--right">
-                            <wux-timeago to="2019-04-12 12:12:00" />
+                            <wux-timeago to="{{item.release_time}}" />
                         </view>
-                        <view class="price fz24 wux-text--right">299积分</view>
+                        <view class="price fz24 wux-text--right">{{item.integral}}积分</view>
                     </view>
                 </view>
             </view>
-            <view class='articleItem wux-light--bg' bind:tap="toBookDetail">
-                <image mode="aspectFill" class="articleImg"
-                    src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
-                <view class="title wux-ellipsis fz32 pd10">jsp编程</view>
-                <view class="bottom pd10">
-                    <image class="head" catch:tap="toUserDetail"
-                        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
-                    <view class="right">
-                        <view class="time fz24 wux-text--right">
-                            <wux-timeago to="2019-04-12 12:12:00" />
-                        </view>
-                        <view class="tip fz24 wux-text--right wux-balanced--bg wux-light">求书本</view>
-                    </view>
-                </view>
-            </view>
-            
         </view>
     </wux-sticky-item>
 </wux-sticky>

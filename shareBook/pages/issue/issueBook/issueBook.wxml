@@ -10,20 +10,17 @@
             <view class="inputBox">作者：<input placeholder="作者" name="author" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <view class="inputBox">出版社：<input placeholder="出版社" name="" /></view>
-        </wux-cell>
-        <wux-cell hover-class="none">
-            <view class="inputBox">价格：<input placeholder="价格" name="" /></view>
+            <view class="inputBox">出版社：<input placeholder="出版社" name="press" /></view>
         </wux-cell>
         <wux-cell hover-class="none">
             <view class="inputBox">分类：
-                <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" range-key="name" name="fenlei">
+                <picker bindchange="bindPickerChange" value="{{array[index].id}}" range="{{array}}" range-key="name" name="categoryId">
                     <input placeholder="计算机类" name="" value="{{array[index].name}}" disabled="{{true}}" />
                 </picker>
             </view>
         </wux-cell>
         <wux-cell hover-class="none">
-            <view class="inputBox"><view class="leftTip">备注：</view><textarea auto-height placeholder="描述一下你的书本吧" name="beizhu" /></view>
+            <view class="inputBox"><view class="leftTip">备注：</view><textarea auto-height placeholder="描述一下你的书本吧" name="notes" /></view>
         </wux-cell>
         <wux-cell>
             <view class="img_box">
@@ -45,10 +42,10 @@
         <wux-input-number slot="footer" shape="circle" color="balanced" slot="footer" min="1" bind:change="numChange"/>
     </wux-cell>
     <wux-cell hover-class="none">
-        <view class="inputBox">积分：<input placeholder="书本所需积分（单价）" name="" type="number"/></view>
+        <view class="inputBox">积分：<input placeholder="书本所需积分（单价）" name="integral" type="number"/></view>
     </wux-cell>
     <wux-cell hover-class="none">
-    <view class="inputBox">手机：<input placeholder="联系方式" name="" type="number" maxlength="11"/></view>
+    <view class="inputBox">手机：<input placeholder="联系方式" name="phone" type="number" maxlength="11"/></view>
     </wux-cell>
     <wux-cell hover-class="none" title="交易方式">
         <view slot="footer">

@@ -40,12 +40,12 @@ function wxRequest(url, data, callback) {
                     typeof callback == "function" && callback(res);
                 }
             } else {
-                tips.toast('系统繁忙', '', "none");
+                tips.toast('系统繁忙');
             }
         },
         fail() {
             tips.loaded();
-            tips.toast('网络崩溃啦', '', "none");
+            tips.toast('网络崩溃啦');
         }
     });
 }
@@ -75,12 +75,12 @@ function wxRequestUpload(filePath, callback) {
                     }
                 );
             } else {
-                tips.toast('系统繁忙', '', "none");
+                tips.toast('系统繁忙');
             }
         },
         fail() {
             tips.loaded();
-            tips.toast('网络崩溃啦', '', "none");
+            tips.toast('网络崩溃啦');
         }
     });
 }
