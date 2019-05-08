@@ -1,11 +1,14 @@
 import {
   wxRequest
 } from "../../../utils/wxRequest";
-let name, phone, id;
+import {
+  tips
+} from "../../../utils/tip";
+let name, phone, stuCardNumber, idCardNumber;
 Page({
   data: {
-    idSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640",
-    stuSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640",
+    idCardSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640",
+    stuCardSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"
   },
 
   //studentCode是学生证
@@ -13,9 +16,10 @@ Page({
     let that = this;
     wxRequest('/user/info.wx', {}, function (res) {
       let info = res.data.result
-      name = info.nick_name;
+      name = info.studentName;
       phone = info.phone;
-      id = studentId
+      stuCardNumber = info.studentId;
+      idCardNumber = info.idCardNumber;
       that.setData({
         userInfo: info
       })
@@ -24,6 +28,28 @@ Page({
 
   onShow: function () {
 
+  },
+
+  submit(res) {
+    let json = {
+      studentName: name,
+      studentId: stuCardNumber,
+      phone: phone,
+      idCardNumber: idCardNumber,
+      studentCode: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
+      idcardpic: 'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640'
+      // studentCode: that.data.stuCardSrc,
+      // idcardpic: that.data.idCardSrc
+    }
+    wxRequest('/user/certification.wx', {
+      json: JSON.stringify(json)
+    }, function (res) {
+      tips.toast('提交认证成功').then(function (res) {
+        wx.navigateBack({
+          delta: 1
+        });
+      })
+    })
   },
 
   // 上传身份证
@@ -52,7 +78,6 @@ Page({
   //上传图片
   uploadPic: function (img) {
     let that = this;
-
     wxRequestUpload(img, function (res) {
       console.log('res');
       console.log(JSON.parse(res.data))
@@ -68,14 +93,18 @@ Page({
 
   // 获取输入
   inputName(res) {
-    console.log(res.detail.value)
+    name = res.detail.value
   },
 
   inputPhone(res) {
-
+    phone = res.detail.value
   },
 
-  inputId(res) {
+  inputStuCard(res) {
+    stuCardNumber = res.detail.value
+  },
 
+  inputIdCard(res) {
+    idCardNumber = res.detail.value
   }
 })

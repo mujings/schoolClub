@@ -9,10 +9,10 @@
         <view slot="content" class="articleBox">
             <view wx:for="{{bookArr}}" class='articleItem wux-light--bg' bind:tap="toBookDetail" id="{{item.id}}">
                 <image mode="aspectFill" class="articleImg"
-                    src="{{item.titlePic}}" />
+                    src="{{item.titlePic}}"/>
                 <view class="title wux-ellipsis fz32 pd10">{{item.name}}</view>
                 <view class="bottom pd10">
-                    <image class="head" catch:tap="toUserDetail"
+                    <image class="head" id="{{item.userId}}" catch:tap="toUserDetail"
                         src="{{item.avatarUrl}}" />
                     <view class="right">
                         <view class="time fz24 wux-text--right">

@@ -1,8 +1,5 @@
 var appInst = getApp();
 import {
-  tips
-} from "../../utils/tip";
-import {
   wxRequest
 } from "../../utils/wxRequest";
 Page({

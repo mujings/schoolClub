@@ -130,9 +130,9 @@ Page({
 
     //用户详情
     toUserDetail(e) {
-        console.log(e)
-        // wx.navigateTo({
-        //     url: 'userDetail/userDetail'
-        // });
+        // console.log(e)
+        wx.navigateTo({
+            url: 'userDetail/userDetail?id='+e.currentTarget.id
+        });
     }
 })

@@ -4,7 +4,7 @@
     </swiper-item>
 </swiper>
 <view class="bookInfo wux-light--bg">
-    <view class="title pd20"><view class="fz36">{{bookInfo.name}}</view><wux-tag color="#EF473A" wux-class="wux-mr--0">举报违规</wux-tag>
+    <view class="title pd20"><view class="fz36">{{bookInfo.name}}</view><wux-tag color="#EF473A" wux-class="wux-mr--0" catch:tap="toReport">举报违规</wux-tag>
     </view>
     <view class="bottom">
         <view>{{bookInfo.author}}</view>
