@@ -1,66 +1,47 @@
-// pages/center/myIssue/myIssue.js
+import {
+  wxRequest
+} from "../../../utils/wxRequest";
+import {
+  tips
+} from "../../../utils/tip";
+
+let isOver = false, //加载所有
+  pageStart = 1; //第几页开始加载
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    list: []
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    this.getInfo()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  getInfo() {
+    if (!isOver) {
+      let that = this;
+      let list = that.data.list;
+      wxRequest('/book/uList.wx', {
+        pageStart: pageStart
+      }, function (res) {
+        if (list.length == res.data.result.pageCount) {
+          isOver = true
+          tips.toast('已加载所有')
+        } else {
+          pageStart++
+          list = list.concat(res.data.result.data)
+          that.setData({
+            list: list
+          })
+        }
+      })
+    } else {
+      tips.toast('已加载所有')
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  // 上划加载更多
+  onReachBottom() {
+    this.getInfo()
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
