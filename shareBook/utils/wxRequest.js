@@ -35,7 +35,7 @@ function wxRequest(url, data, callback) {
                         function (res) { //取消
 
                         });
-                } else if (res.data.status == '403') {
+                } else if (res.data.status == '403') {//未认证
                     tips.confirm(res.data.message).then(
                         function (res) { //确定
                             wx.navigateTo({
@@ -72,17 +72,33 @@ function wxRequestUpload(filePath, callback) {
         },
         method: 'POST',
         success(res) {
-            tips.loaded();
+            tips.loaded()
             if (res.statusCode == 200) {
-                typeof callback == "function" && callback(res);
-            } else if (res.statusCode == 401) {
-                tips.confirm('登录失效，请重新登录！').then(
-                    function (res) {
-                        wx.navigateTo({
-                            url: '/pages/login/login'
+                if (res.data.status == 'success') {
+                    typeof callback == "function" && callback(res);
+                } else if (res.data.status == '401') {
+                    tips.confirm(res.data.message).then(
+                        function (res) { //确定
+                            wx.navigateTo({
+                                url: '/pages/login/login?type=' + 1
+                            });
+                        },
+                        function (res) { //取消
+
                         });
-                    }
-                );
+                } else if (res.data.status == '403') {
+                    tips.confirm(res.data.message).then(
+                        function (res) { //确定
+                            wx.navigateTo({
+                                url: '/pages/center/userInfo/userInfo?type=' + 1
+                            });
+                        },
+                        function (res) { //取消
+
+                        });
+                } else {
+                    tips.toast(res.data.message)
+                }
             } else {
                 tips.toast('系统繁忙');
             }
