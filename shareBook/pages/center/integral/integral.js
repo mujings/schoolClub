@@ -15,6 +15,8 @@ Page({
   },
 
   onLoad: function (options) {
+    pageStart = 1
+    isOver = false
     this.getInfo()
   },
 

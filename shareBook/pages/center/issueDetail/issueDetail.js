@@ -9,7 +9,7 @@ Page({
   },
 
   onLoad: function (options) {
-
+    console.log(options.id)
   },
 
   onReady: function () {

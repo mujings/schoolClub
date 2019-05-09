@@ -17,6 +17,9 @@ Page({
 
     onLoad() {
         let that = this;
+        pageStart = 1
+        isOver = false,
+        keyWord = ''
         wxRequest('/category/categorys.wx', {
             parentId: 0
         }, function (res) {

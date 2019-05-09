@@ -7,8 +7,8 @@ import {
 let name, phone, stuCardNumber, idCardNumber;
 Page({
   data: {
-    idCardSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640",
-    stuCardSrc: "https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640"
+    idCardBackSrc: "https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190509095335.png?sign=14b9f9046ae8a6993dfa1bdd2c86d353&t=1557367365",
+    stuCardBackSrc: "https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190509095342.png?sign=a068ff24dd8a42c0de92d23589bfbe34&t=1557367415"
   },
 
   //studentCode是学生证
@@ -21,7 +21,9 @@ Page({
       stuCardNumber = info.studentId;
       idCardNumber = info.idCardNumber;
       that.setData({
-        userInfo: info
+        userInfo: info,
+        idCardSrc: info.idCardPic,
+        stuCardSrc: info.studentCode
       })
     })
   },
@@ -45,9 +47,11 @@ Page({
       json: JSON.stringify(json)
     }, function (res) {
       tips.toast('提交认证成功').then(function (res) {
-        wx.navigateBack({
-          delta: 1
-        });
+        setTimeout(function () {
+          wx.navigateBack({
+            delta: 1
+          });
+        }, 1000)
       })
     })
   },

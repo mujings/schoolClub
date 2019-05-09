@@ -1,13 +1,17 @@
-let text='';
+let text = '',
+  userId = '',
+  bookId = '';
 Page({
   data: {
     type: 1,
     textDisable: true,
-    isLoad:false
+    isLoad: false
   },
 
   onLoad: function (options) {
-
+    console.log(options)
+    userId = options.userId;
+    bookId = options.bookId;
   },
 
   onShow: function () {
@@ -26,16 +30,16 @@ Page({
     }
   },
 
-  getText(e){
+  getText(e) {
     text = e.detail.value
   },
 
-  submit(e){
+  submit(e) {
     let that = this;
     that.setData({
-      isLoad:true
+      isLoad: true
     })
-    console.log(that.data.type,text)
+    console.log(that.data.type, text)
   }
 
 })

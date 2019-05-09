@@ -1,20 +1,20 @@
  <view class="box">
-     <view class="content pd20 wux-light--bg mb1">
-         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+     <view wx:for="{{list}}" class="content pd20 wux-light--bg mb1">
+         <image class="wux-mr--10" src="{{item.titlePic}}" />
          <view class="right">
              <view class="title">
-                 <view>杯中窥人</view>
-                 <navigator url='../issueDetail/issueDetail' hover-class='none' class='wux-balanced'>详情</navigator>
+                 <view>{{item.name}}</view>
+                 <navigator url='../issueDetail/issueDetail?id={{item.id}}' hover-class='none' class='wux-balanced'>详情</navigator>
              </view>
              <view>
-                 ke888
+                 {{item.notes}}
              </view>
              <view>
-                 交易方式：校内面交
+                 交易方式：{{item.trade_way == 1?"校内面交":"快递交易"}}
              </view>
              <view class="status">
-                 <view>2019.03.03 12:03</view>
-                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">已借出3本</wux-tag>
+                 <view>{{item.release_time}}</view>
+                 <wux-tag color="#33CD5F" wux-class="wux-mr--0">已借出{{item.outNum}}本</wux-tag>
              </view>
          </view>
      </view>

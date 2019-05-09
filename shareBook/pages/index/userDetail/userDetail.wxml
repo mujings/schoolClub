@@ -4,7 +4,7 @@
     <view>{{nick_name}}</view>
 </view>
 <view class="wux-light--bg content mb100">
-    <view class="cold">借出记录</view>
+    <view class="cold">TA的书本</view>
     <view class="item" wx:for="{{bookArr}}">
         <image class="itemImg"
             src="{{item.titlePic}}"
@@ -14,7 +14,4 @@
             <view class="info cold">{{item.notes}}</view>
         </view>
     </view>
-</view>
-<view class="wux-assertive--bg wux-light bottomBtn">
-    举报违规
 </view>

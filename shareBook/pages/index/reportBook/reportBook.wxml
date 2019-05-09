@@ -1,12 +1,11 @@
 <view class="bookInfo">
     <view class="wux-pl--10 wux-dark">举报动态</view>
     <view class="userInfo wux-light--bg pd20">
-        <image class="head wux-mr--10"
-            src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
-        <view class="userName">楼主</view>
+        <view class="userName">{{nick_name}}</view>
+        <view class="bookName">{{bookName}}</view>
     </view>
-    <view class="bookName wux-light--bg">书名</view>
 </view>
+
 <view class="item">
     <view class="wux-pl--10 wux-dark">举报原因</view>
     <wux-radio-group name="d" value="{{type}}" bind:change="onChange">

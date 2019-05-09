@@ -14,8 +14,8 @@
 </wux-cell-group>
 
 <view class="imgBox pd20">
-    <image src="{{idCardSrc}}" bindtap="chooseIdPic"/>
-    <image src="{{stuCardSrc}}" bindtap="chooseStudentPic"/>
+    <image src="{{idCardSrc == null?idCardBackSrc:idCardSrc}}" bindtap="chooseIdPic"/>
+    <image src="{{stuCardSrc == null?stuCardBackSrc:stuCardSrc}}" bindtap="chooseStudentPic"/>
 </view>
 <view class="btnBox wux-mt--10">
     <wux-button wx:if="{{userInfo.status == 0}}" wux-class="btn" loading="{{isLoad}}" type="balanced" bind:click="submit">提交认证</wux-button>

@@ -46,8 +46,9 @@ Page({
 
   //举报书本
   toReport(e) {
+    let that = this;
     wx.navigateTo({
-      url: '../reportBook/reportBook'
+      url: '../reportBook/reportBook?userId='+that.data.bookInfo.userId+'&bookId='+that.data.bookInfo.id
     });
   },
 
