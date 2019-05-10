@@ -1,5 +1,7 @@
 {
   "usingComponents": {
-    "wux-tag": "../../../dist/tag/index"
+    "wux-tag": "../../../dist/tag/index",
+    "wux-tabs": "../../../dist/tabs/index",
+    "wux-tab": "../../../dist/tab/index"
   }
 }

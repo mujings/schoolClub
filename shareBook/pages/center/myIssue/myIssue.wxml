@@ -1,10 +1,16 @@
+ <wux-tabs controlled current="{{key}}" bind:change="tabChange">
+     <wux-tab key="0" title="已发布"></wux-tab>
+     <wux-tab key="2" title="审核中"></wux-tab>
+     <wux-tab key="1" title="不通过"></wux-tab>
+ </wux-tabs>
  <view class="box">
      <view wx:for="{{list}}" class="content pd20 wux-light--bg mb1">
          <image class="wux-mr--10" src="{{item.titlePic}}" />
          <view class="right">
              <view class="title">
                  <view>{{item.name}}</view>
-                 <navigator url='../issueDetail/issueDetail?id={{item.id}}' hover-class='none' class='wux-balanced'>详情</navigator>
+                 <navigator url='../issueDetail/issueDetail?id={{item.id}}' hover-class='none' class='wux-balanced'>详情
+                 </navigator>
              </view>
              <view>
                  {{item.notes}}

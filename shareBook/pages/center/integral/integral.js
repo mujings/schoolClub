@@ -15,9 +15,15 @@ Page({
   },
 
   onLoad: function (options) {
+    let that = this;
     pageStart = 1
     isOver = false
-    this.getInfo()
+    that.getInfo()
+    wxRequest('/user/info.wx',{},function(res) {
+      that.setData({
+        integral:res.data.result.integral
+      })
+    })
   },
 
   getInfo() {

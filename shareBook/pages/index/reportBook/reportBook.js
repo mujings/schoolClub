@@ -1,6 +1,9 @@
 import {
   wxRequest
 } from "../../../utils/wxRequest";
+import {
+  tips
+} from "../../../utils/tip";
 let text = '',
   userId = '',
   bookId = '';
@@ -67,7 +70,13 @@ Page({
       bookPeople: userId,
       content: content
     }, function (res) {
-
+      tips.toast(res.data.message).then(function (res) {
+        setTimeout(function () {
+          wx.navigateBack({
+            delta: 1
+          });
+        }, 1000)
+      })
     })
   }
 

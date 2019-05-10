@@ -15,7 +15,7 @@
         <wux-cell hover-class="none">
             <view class="inputBox">分类：
                 <picker bindchange="bindPickerChange" value="{{array[index].id}}" range="{{array}}" range-key="name" name="categoryId">
-                    <input placeholder="计算机类" name="" value="{{array[index].name}}" disabled="{{true}}" />
+                    <input name="" value="{{array[index].name}}" disabled="{{true}}" />
                 </picker>
             </view>
         </wux-cell>
