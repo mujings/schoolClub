@@ -4,8 +4,8 @@ import {
 const app = getApp();
 
 // var http = 'http://user.xyshare.top/sucaigongxiang-user';//正式域名
-// var http = 'http://47.103.75.229:8080/sucaigongxiang-user';
-var http = 'http://192.168.1.244/sucaigongxiang-user';
+var http = 'http://47.103.75.229:8080/sucaigongxiang-user';
+// var http = 'http://192.168.1.244/sucaigongxiang-user';
 
 var httpUpload = 'https://hongkedou.file.infotoo.com.cn/kooun-file/file/pic/upload.wx';
 

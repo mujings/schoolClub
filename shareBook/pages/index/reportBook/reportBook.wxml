@@ -1,19 +1,21 @@
 <view class="bookInfo">
     <view class="wux-pl--10 wux-dark">举报动态</view>
     <view class="userInfo wux-light--bg pd20">
+        <image class="head wux-mr--10"
+            src="{{head}}" />
         <view class="userName">{{nick_name}}</view>
-        <view class="bookName">{{bookName}}</view>
     </view>
+    <view class="bookName wux-light--bg">{{bookName}}</view>
 </view>
 
 <view class="item">
     <view class="wux-pl--10 wux-dark">举报原因</view>
     <wux-radio-group name="d" value="{{type}}" bind:change="onChange">
-        <wux-radio title="色情、低俗内容" value="1" />
-        <wux-radio title="政治、暴力敏感内容" value="2" />
-        <wux-radio title="小广告" value="3" />
-        <wux-radio title="虚假信息、谣言" value="4" />
-        <wux-radio title="其他" value="5" />
+        <wux-radio title="色情、低俗内容" value="色情、低俗内容" />
+        <wux-radio title="政治、暴力敏感内容" value="政治、暴力敏感内容" />
+        <wux-radio title="小广告" value="小广告" />
+        <wux-radio title="虚假信息、谣言" value="虚假信息、谣言" />
+        <wux-radio title="其他" value="其他" />
     </wux-radio-group>
     <wux-cell-group>
         <wux-cell hover-class="none">
