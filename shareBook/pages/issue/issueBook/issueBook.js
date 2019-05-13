@@ -4,7 +4,9 @@ import {
 import {
   wxRequestUpload
 } from "../../../utils/wxRequest";
-import { tips } from "../../../utils/tip";
+import {
+  tips
+} from "../../../utils/tip";
 let picIds = []; //图片id
 let bookNum = 1; //图书数量
 Page({
@@ -30,8 +32,11 @@ Page({
     })
   },
 
-  onShow: function () {
-
+  bindPickerChange(res) {
+    console.log(res)
+    this.setData({
+      index: res.detail.value
+    })
   },
 
   // 表单提交
@@ -51,12 +56,12 @@ Page({
       json: JSON.stringify(json),
       categoryId: categoryId
     }, function (res) {
-      tips.toast(res.data.message).then(function(res) {
-        setTimeout(function(res) {
+      tips.toast(res.data.message).then(function (res) {
+        setTimeout(function (res) {
           wx.navigateBack({
             delta: 1
           });
-        },1000)
+        }, 1000)
       })
     })
   },

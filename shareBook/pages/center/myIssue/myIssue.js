@@ -10,13 +10,21 @@ let isOver = false, //加载所有
 
 Page({
   data: {
-    list: []
+    list: [],
+    key: 0
   },
 
   onLoad: function (options) {
     pageStart = 1
     isOver = false
     this.getInfo()
+  },
+
+  tabChange(res) {
+    // console.log(res)
+    this.setData({
+      key:res.detail.key
+    })
   },
 
   getInfo() {

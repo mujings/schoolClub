@@ -1,6 +1,9 @@
 import {
   wxRequest
 } from "../../../utils/wxRequest";
+import {
+  tips
+} from "../../../utils/tip";
 let bookId = ''
 Page({
   data: {
@@ -8,6 +11,7 @@ Page({
   },
 
   onLoad: function (options) {
+    let that = this;
     bookId = options.id
     wxRequest('/book/getBook.wx', {
       bookId: bookId
@@ -32,7 +36,15 @@ Page({
       bookId: bookId,
       state: 3
     }, function (res) {
-
+      tips.toast('取消成功').then(function (res) {
+        wxRequest('/book/getBook.wx', {
+          bookId: bookId
+        }, function (res) {
+          that.setData({
+            bookInfo: res.data.result
+          })
+        })
+      })
     })
   },
 
