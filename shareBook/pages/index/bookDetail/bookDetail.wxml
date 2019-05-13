@@ -13,7 +13,7 @@
 </view>
 <view class="tabBox pd20 wux-light--bg wux-mt--10 wux-mb--10">
     <view>交易方式：{{bookInfo.trade_way == 1?"校内面交":"快递交易"}}</view>
-    <view>积分：{{bookInfo.integral}}</view>
+    <view>单价：{{bookInfo.integral}}积分</view>
     <view>剩余数量：{{bookInfo.num}}</view>
 </view>
 <view class="commentBox pd20 wux-light--bg">

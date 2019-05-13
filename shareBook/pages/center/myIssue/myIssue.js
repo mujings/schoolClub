@@ -24,7 +24,8 @@ Page({
       let that = this;
       let list = that.data.list;
       wxRequest('/book/uList.wx', {
-        pageStart: pageStart
+        pageStart: pageStart,
+        state:0
       }, function (res) {
         if (list.length == res.data.result.pageCount) {
           isOver = true

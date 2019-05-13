@@ -1,5 +1,5 @@
  <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
-     <wux-tab key="{{ 0 }}" title="借入"></wux-tab>
+     <wux-tab key="{{ 2 }}" title="借入"></wux-tab>
      <wux-tab key="{{ 1 }}" title="借出"></wux-tab>
  </wux-tabs>
  <view class="box">
