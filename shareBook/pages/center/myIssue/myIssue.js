@@ -11,7 +11,7 @@ let isOver = false, //加载所有
 Page({
   data: {
     list: [],
-    key: 0
+    key: 1
   },
 
   onLoad: function (options) {
@@ -22,18 +22,22 @@ Page({
 
   tabChange(res) {
     // console.log(res)
+    isOver = false;
+    pageStart = 1;
     this.setData({
-      key:res.detail.key
+      key: res.detail.key,
+      list:[]
     })
+    this.getInfo();
   },
 
   getInfo() {
+    let that = this;
     if (!isOver) {
-      let that = this;
       let list = that.data.list;
       wxRequest('/book/uList.wx', {
         pageStart: pageStart,
-        state:0
+        state: that.data.key
       }, function (res) {
         if (list.length == res.data.result.pageCount) {
           isOver = true

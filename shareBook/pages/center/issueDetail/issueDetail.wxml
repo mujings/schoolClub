@@ -7,7 +7,7 @@
     <view class="title pd20"><view class="fz36">{{bookInfo.name}}</view>
     </view>
     <view class="bottom">
-        <view>{{bookInfo.author}}</view>
+        <view>{{bookInfo.author}}</view>·
         <view>{{bookInfo.press}}</view>
     </view>
 </view>
@@ -25,5 +25,6 @@
     </view>
 </view>
 <view class="btnBox colw">
-    <view class="wux-assertive--bg" catch:tap="cancel">取消发布</view>
+    <view wx:if="{{bookInfo.state == 1||bookInfo.state == 2}}" class="wux-energized--bg" catch:tap="cancel">取消发布</view>
+    <view wx:if="{{bookInfo.state == 3}}" class="wux-dark--bg" catch:tap="cancel">已取消发布</view>
 </view>

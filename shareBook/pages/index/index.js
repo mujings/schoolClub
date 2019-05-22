@@ -10,7 +10,6 @@ let isOver = false, //加载所有
     keyWord = '';
 Page({
     data: {
-        scrollTop: 0,
         classId: '', //分类id
         bookArr: [],
     },
@@ -111,16 +110,8 @@ Page({
         if (that.data.classId == '') {
             that.getBookListSearch()
         } else {
-            getBookList()
+            that.getBookList()
         }
-    },
-
-    // 吸顶
-    onPageScroll(e) {
-        console.log('onPageScroll', e.scrollTop)
-        this.setData({
-            scrollTop: e.scrollTop,
-        })
     },
 
     //图书详情

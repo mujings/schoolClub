@@ -1,7 +1,8 @@
  <wux-tabs controlled current="{{key}}" bind:change="tabChange">
-     <wux-tab key="0" title="已发布"></wux-tab>
+     <wux-tab key="1" title="已发布"></wux-tab>
      <wux-tab key="2" title="审核中"></wux-tab>
-     <wux-tab key="1" title="不通过"></wux-tab>
+     <wux-tab key="0" title="不通过"></wux-tab>
+     <wux-tab key="3" title="已取消"></wux-tab>
  </wux-tabs>
  <view class="box">
      <view wx:for="{{list}}" class="content pd20 wux-light--bg mb1">

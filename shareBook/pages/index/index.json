@@ -2,8 +2,6 @@
   "navigationBarTitleText": "首页",
   "usingComponents": {
       "wux-search-bar": "../../dist/search-bar/index",
-      "wux-sticky": "../../dist/sticky/index",
-      "wux-sticky-item": "../../dist/sticky-item/index",
       "wux-timeago": "../../dist/timeago/index"
   }
 }

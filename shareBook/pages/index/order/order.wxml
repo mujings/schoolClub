@@ -1,11 +1,11 @@
 <view class="infoBox wux-light--bg">
     <image class="bookImg"
-        src="https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg" />
+        src="{{info.pic[0]}}" />
     <view class="right pd20">
-        <view class="fz32">杯中窥人</view>
-        <view>韩寒</view>
-        <view>作家出版社</view>
-        <view>250积分</view>
+        <view class="fz32">{{info.name}}</view>
+        <view>{{info.author}}</view>
+        <view>{{info.press}}</view>
+        <view>{{info.integral}}积分</view>
     </view>
 </view>
 
@@ -13,8 +13,7 @@
     <wux-cell-group>
         <wux-cell title="交易方式" hover-class="none" extra="校内面交"></wux-cell>
         <wux-cell title="数量" hover-class="none">
-            <wux-input-number longpress disabled="{{ false }}" value="{{ value }}" controlled min="{{ 1 }}"
-                max="{{ 10 }}" bind:change="onChange" slot="footer" />
+            <wux-input-number value="{{ value }}" min="{{1}}" controlled="{{true}}" bind:change="onChange" slot="footer" />
         </wux-cell>
         <wux-cell title="联系方式" hover-class="none">
             <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="请输入联系方式" type="number"

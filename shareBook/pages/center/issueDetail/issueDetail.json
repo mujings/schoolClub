@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "详情",
   "usingComponents": {
-    "wux-tag": "../../../dist/tag/index"
+    
   }
 }

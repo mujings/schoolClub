@@ -1,12 +1,10 @@
 <wux-search-bar clear bind:cancel="search" bind:confirm="search" cancelText="搜索" />
-<wux-sticky scrollTop="{{scrollTop}}">
-    <wux-sticky-item>
-        <scroll-view slot="title" class="classify wux-light--bg" scroll-x="{{true}}" scroll-with-animation="{{true}}">
+        <scroll-view class="classify wux-light--bg" scroll-x="{{true}}" scroll-with-animation="{{true}}">
             <view class="classifyBox">
                 <view wx:for="{{array}}" class="{{classId == item.id?'classifyItem wux-balanced':'classifyItem'}}" id="{{item.id}}" catch:tap="selectClss">{{item.name}}</view>
             </view>
         </scroll-view>
-        <view slot="content" class="articleBox">
+        <view class="articleBox">
             <view wx:for="{{bookArr}}" class='articleItem wux-light--bg' bind:tap="toBookDetail" id="{{item.id}}">
                 <image mode="aspectFill" class="articleImg"
                     src="{{item.titlePic}}"/>
@@ -23,5 +21,3 @@
                 </view>
             </view>
         </view>
-    </wux-sticky-item>
-</wux-sticky>

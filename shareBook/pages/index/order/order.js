@@ -1,66 +1,32 @@
-// pages/index/order/order.js
+import {
+  wxRequest
+} from "../../../utils/wxRequest";
+let userId = ""
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    value:1
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    let that = this;
+    userId = options.userId
+    wxRequest('/book/getBook.wx', {
+      bookId: options.bookId
+    }, function (res) {
+      that.setData({
+        info:res.data.result
+      })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onChange(res){
+    let that = this;
+    let num = res.detail.value
+    if (that.data.info.number+1 > num ) {
+      that.setData({
+        value:res.detail.value
+      })
+    }
   }
 })

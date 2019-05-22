@@ -39,8 +39,9 @@ Page({
 
   //下单
   toOrder(e) {
+    let that = this;
     wx.navigateTo({
-      url: '../order/order?id='+e.currentTarget.id
+      url: '../order/order?userId='+that.data.bookInfo.userId+'&bookId='+that.data.bookInfo.id
     });
   },
 
