@@ -23,6 +23,6 @@
 </view>
 
 <view class="btnBox wux-light--bg">
-    <view class="left wux-pl--10">所需积分：</view>
+    <view class="left wux-pl--10">所需积分：{{integral}}</view>
     <view class="wux-balanced--bg wux-light btn wux-text--center">确认</view>
 </view>

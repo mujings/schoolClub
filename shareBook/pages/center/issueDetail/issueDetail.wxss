@@ -28,6 +28,7 @@
 
 .commentBox .right {
     margin-left: 20rpx;
+    flex: 1
 }
 
 .btnBox {

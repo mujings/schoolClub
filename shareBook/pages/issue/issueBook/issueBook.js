@@ -45,9 +45,9 @@ Page({
     let json = res.detail.value;
     let categoryId = json.categoryId;
     delete json.categoryId
-    json.titlePic = "https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg"
+    json.titlePic = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559102959&di=0d3e96dd8d7ade8233769c9437bd7cc5&imgtype=jpg&er=1&src=http%3A%2F%2Fi3.sinaimg.cn%2Fedu%2F2010%2F1021%2F20101021100843.jpg"
     let arr = [];
-    arr.push('https://ss3.baidu.com/-fo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=7dac85b2825494ee982209191df4e0e1/c2cec3fdfc03924558fae5028994a4c27d1e256b.jpg')
+    arr.push('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559102959&di=0d3e96dd8d7ade8233769c9437bd7cc5&imgtype=jpg&er=1&src=http%3A%2F%2Fi3.sinaimg.cn%2Fedu%2F2010%2F1021%2F20101021100843.jpg')
     json.pic = arr
     json.number = bookNum;
     json.tradeWay = 1;

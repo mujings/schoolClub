@@ -7,7 +7,7 @@
     <view class="title pd20"><view class="fz36">{{bookInfo.name}}</view>
     </view>
     <view class="bottom">
-        <view>{{bookInfo.author}}</view>·
+        <view>{{bookInfo.author}}</view>
         <view>{{bookInfo.press}}</view>
     </view>
 </view>

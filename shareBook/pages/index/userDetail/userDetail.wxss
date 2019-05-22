@@ -26,3 +26,7 @@
     height: 250rpx;
     margin-right: 20rpx;
 }
+
+.item .right{
+    flex: 1
+}

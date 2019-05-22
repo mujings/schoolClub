@@ -11,7 +11,7 @@
             mode="aspectFill" />
         <view class="right">
             <view class="title fz32 wux-ellipsis">{{item.name}}</view>
-            <view class="info cold">{{item.notes}}</view>
+            <view class="info cold wux-ellipsis--l3">{{item.notes}}</view>
         </view>
     </view>
 </view>
