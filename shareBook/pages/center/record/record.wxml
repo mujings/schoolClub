@@ -1,6 +1,6 @@
  <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
-     <wux-tab key="{{ 2 }}" title="借入"></wux-tab>
-     <wux-tab key="{{ 1 }}" title="借出"></wux-tab>
+     <wux-tab key="{{ 2 }}" title="购入"></wux-tab>
+     <wux-tab key="{{ 1 }}" title="售出"></wux-tab>
  </wux-tabs>
  <view class="box">
      <view class="content pd20 wux-light--bg mb1">
@@ -14,7 +14,7 @@
                  ke888
              </view>
              <view>
-                 交易方式：校内面交
+                 交易方式：当面交易
              </view>
              <view class="status">
                  <view>2019.03.03 12:03</view>

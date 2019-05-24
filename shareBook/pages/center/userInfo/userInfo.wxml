@@ -8,13 +8,9 @@
     <wux-cell title="学号" hover-class="none">
         <wux-input slot="footer" placeholder-class="wux-text--right" controlled value="{{userInfo.studentId}}" placeholder="学号" type="number"  maxlength="10"  bind:change="inputStuCard"/>
     </wux-cell>
-    <wux-cell title="身份证号码" hover-class="none">
-        <wux-input slot="footer" placeholder-class="wux-text--right" controlled value="{{userInfo.idCardNumber}}" placeholder="身份证号码" type="number"  maxlength="18"  bind:change="inputIdCard"/>
-    </wux-cell>
 </wux-cell-group>
 
 <view class="imgBox pd20">
-    <image src="{{idCardSrc == null?idCardBackSrc:idCardSrc}}" bindtap="chooseIdPic"/>
     <image src="{{stuCardSrc == null?stuCardBackSrc:stuCardSrc}}" bindtap="chooseStudentPic"/>
 </view>
 <view class="btnBox wux-mt--10">

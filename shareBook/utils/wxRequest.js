@@ -3,11 +3,11 @@ import {
 } from "./tip";
 const app = getApp();
 
-// var http = 'http://user.xyshare.top/sucaigongxiang-user';//正式域名
-var http = 'http://47.103.75.229:8080/sucaigongxiang-user';
+var http = 'https://user.xyshare.top/sucaigongxiang-user';//正式域名
+// var http = 'http://47.103.75.229:8080/sucaigongxiang-user';
 // var http = 'http://192.168.1.244/sucaigongxiang-user';
 
-var httpUpload = 'https://hongkedou.file.infotoo.com.cn/kooun-file/file/pic/upload.wx';
+var httpUpload = 'https://user.xyshare.top/sucaigongxiang-user/file/pic/upload.wx';
 
 function wxRequest(url, data, callback) {
     tips.loading();
@@ -74,10 +74,12 @@ function wxRequestUpload(filePath, callback) {
         success(res) {
             tips.loaded()
             if (res.statusCode == 200) {
-                if (res.data.status == 'success') {
-                    typeof callback == "function" && callback(res);
-                } else if (res.data.status == '401') {
-                    tips.confirm(res.data.message).then(
+                console.log(res.data)
+                let data = JSON.parse(res.data)//转化格式
+                if (data.status == 'success') {
+                    typeof callback == "function" && callback(data);
+                } else if (data.status == '401') {
+                    tips.confirm(data.message).then(
                         function (res) { //确定
                             wx.navigateTo({
                                 url: '/pages/login/login?type=' + 1
@@ -86,8 +88,8 @@ function wxRequestUpload(filePath, callback) {
                         function (res) { //取消
 
                         });
-                } else if (res.data.status == '403') {
-                    tips.confirm(res.data.message).then(
+                } else if (data.status == '403') {//未认证
+                    tips.confirm(data.message).then(
                         function (res) { //确定
                             wx.navigateTo({
                                 url: '/pages/center/userInfo/userInfo?type=' + 1
@@ -97,7 +99,7 @@ function wxRequestUpload(filePath, callback) {
 
                         });
                 } else {
-                    tips.toast(res.data.message)
+                    tips.toast(data.message)
                 }
             } else {
                 tips.toast('系统繁忙');

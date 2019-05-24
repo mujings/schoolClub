@@ -2,6 +2,9 @@ var appInst = getApp();
 import {
   wxRequest
 } from "../../utils/wxRequest";
+import {
+  tips
+} from "../../utils/tip";
 Page({
   data: {},
 
@@ -27,7 +30,7 @@ Page({
     let that = this;
     if (e.detail.userInfo) {
       appInst.globalData.userInfo = e.detail.userInfo;
-      that.login()
+      that.toProtocol()
     }
   },
 
@@ -44,10 +47,33 @@ Page({
           wxRequest('/userLogin/wechatLogin.wx', {
             userJson: JSON.stringify(userJson)
           }, function (res) {
-              appInst.globalData.userkey = res.data.userkey
-              wx.switchTab({
-                url: '../index/index',
-              });
+            appInst.globalData.userkey = res.data.userkey
+            wx.switchTab({
+              url: '../index/index',
+            });
+          })
+        })
+      }
+    })
+  },
+
+  toProtocol: function () {
+    wx.login({
+      success: (result) => {
+        wxRequest('/userLogin/getOpenId.wx', {
+          code: result.code
+        }, function (res) {
+          let userJson = {
+            userInfo: appInst.globalData.userInfo,
+            openId: res.data.openId
+          }
+          wxRequest('/userLogin/wechatLogin.wx', {
+            userJson: JSON.stringify(userJson)
+          }, function (res) {
+            appInst.globalData.userkey = res.data.userkey
+            wx.navigateTo({
+              url: '../center/protocol/protocol?show=true'
+            });
           })
         })
       }

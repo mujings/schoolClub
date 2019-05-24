@@ -13,11 +13,9 @@
                 <navigator url='../issueDetail/issueDetail?id={{item.id}}' hover-class='none' class='wux-balanced'>详情
                 </navigator>
              </view>
-             <view class="wux-ellipsis--l2">
-                {{item.notes}}
+             <view class="wux-ellipsis--l2">{{item.notes}}
              </view>
-             <view class="cold">
-                交易方式：{{item.trade_way == 1?"校内面交":"快递交易"}}
+             <view class="cold">交易方式：{{item.trade_way == 1?"当面交易":"快递交易"}}
              </view>
              <view class="status cold">
                 <view>{{item.release_time}}</view>

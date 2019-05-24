@@ -7,7 +7,7 @@ import {
 import {
   tips
 } from "../../../utils/tip";
-let picIds = []; //图片id
+let picIds; //图片id
 let bookNum = 1; //图书数量
 Page({
   data: {
@@ -18,6 +18,7 @@ Page({
 
   onLoad: function (options) {
     let that = this;
+    picIds = [];
     if (options.isbn) {
       that.setData({
         isbn: options.isbn
@@ -45,13 +46,11 @@ Page({
     let json = res.detail.value;
     let categoryId = json.categoryId;
     delete json.categoryId
-    json.titlePic = "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559102959&di=0d3e96dd8d7ade8233769c9437bd7cc5&imgtype=jpg&er=1&src=http%3A%2F%2Fi3.sinaimg.cn%2Fedu%2F2010%2F1021%2F20101021100843.jpg"
-    let arr = [];
-    arr.push('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559102959&di=0d3e96dd8d7ade8233769c9437bd7cc5&imgtype=jpg&er=1&src=http%3A%2F%2Fi3.sinaimg.cn%2Fedu%2F2010%2F1021%2F20101021100843.jpg')
-    json.pic = arr
+    json.titlePic = this.data.images[0]
+    json.pic = picIds
     json.number = bookNum;
     json.tradeWay = 1;
-    // console.log(json)
+    console.log(json)
     wxRequest('/book/release.wx', {
       json: JSON.stringify(json),
       categoryId: categoryId
@@ -70,8 +69,6 @@ Page({
   numChange(res) {
     bookNum = res.detail.value
   },
-
-
 
   //选择图片
   choosePic: function () {
@@ -95,13 +92,9 @@ Page({
       urls = that.data.images;
 
     wxRequestUpload(img, function (res) {
-      console.log('上传图片-----');
-      console.log(JSON.parse(res.data))
-      let mydata = JSON.parse(res.data);
-      urls.push(mydata.result.url)
-      picIds.push(mydata.result.urlId);
-
-      if (mydata.status == 'success') {
+      urls.push(res.result.url)
+      picIds.push(res.result.urlId);
+      if (res.status == 'success') {
         console.log(urls);
         that.setData({
           images: urls

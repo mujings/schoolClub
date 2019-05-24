@@ -11,7 +11,7 @@
 
 <view class="operation wux-light--bg wux-mt--10">
     <wux-cell-group>
-        <wux-cell title="交易方式" hover-class="none" extra="校内面交"></wux-cell>
+        <wux-cell title="交易方式" hover-class="none" extra="当面交易"></wux-cell>
         <wux-cell title="数量" hover-class="none">
             <wux-input-number value="{{ value }}" min="{{1}}" controlled="{{true}}" bind:change="onChange" slot="footer" />
         </wux-cell>
