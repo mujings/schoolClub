@@ -1,0 +1,15 @@
+.top{
+    display: flex;
+    justify-content: center;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.bottom view{
+    width: 60%;
+    text-align: center
+}

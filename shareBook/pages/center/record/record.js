@@ -9,7 +9,7 @@ let isOver = false, //加载所有
 
 Page({
   data: {
-    key: '2',
+    key: '3',
     list: []
   },
 
@@ -24,7 +24,8 @@ Page({
       key
     } = e.detail
     this.setData({
-      key
+      key,
+      list:[]
     })
     pageStart = 1
     isOver = false

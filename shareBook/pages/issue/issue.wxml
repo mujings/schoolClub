@@ -1,11 +1,11 @@
 <view class="pd20">
-    <wux-card bordered="{{ false }}" title="发布书本" thumb="https://wux.cdn.cloverstd.com/logo.png" bind:tap="toIssueBook">
+    <wux-card bordered="{{ false }}" title="发布书本" thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/book.png?sign=3a325393d68ef503039a30205ef5ac7c&t=1559311422" bind:tap="toIssueBook">
         <view slot="body">扫描书本背面条形码</view>
         <view slot="footer">分享书本</view>
     </wux-card>
 </view>
 <view class="pd20">
-    <wux-card bordered="{{ false }}" title="求书本" thumb="https://wux.cdn.cloverstd.com/logo.png"  bind:tap="toBegBook">
+    <wux-card bordered="{{ false }}" title="求书本" thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/help.png?sign=1400719cb95c22b0828e08ce53d2111f&t=1559311409"  bind:tap="toBegBook">
         <view slot="body">该功能尚未开放</view>
         <view slot="footer">敬请期待</view>
     </wux-card>

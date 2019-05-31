@@ -1,8 +1,12 @@
+page{
+    background-color: white
+}
+
 .btn{
     color: white;
     border-radius: 50rpx;
-    width: 300rpx;
-    font-size: 32rpx;
+    width: 280rpx;
+    font-size: 30rpx;
 }
 
 .headBox{
@@ -12,5 +16,11 @@
 }
 
 .cardBox{
-    margin: 200rpx 50rpx 100rpx;
+    display: flex;
+    justify-content: center
+}
+
+.logo{
+    width: 600rpx;
+    height: 600rpx;
 }

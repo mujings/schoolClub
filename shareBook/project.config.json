@@ -4,13 +4,20 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"checkInvalidKey": true
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.0",
@@ -40,7 +47,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -166,6 +173,12 @@
 					"name": "发布详情",
 					"pathName": "pages/center/issueDetail/issueDetail",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "下单成功页面",
+					"pathName": "pages/index/pay/pay",
 					"scene": null
 				}
 			]

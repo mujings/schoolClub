@@ -1,0 +1,7 @@
+<view class="top wux-mt--30">
+    <wux-icon type="md-checkmark-circle" size="120" color="#33CD5F" />
+</view>
+<view class="bottom">
+    <view class="pay wux-balanced--bg wux-light wux-p--10" catch:tap="pay">付款</view>
+    <view class="back wux-p--10" catch:tap="back">返回</view>
+</view>

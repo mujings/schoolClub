@@ -4,10 +4,10 @@
 </view>
 
 <wux-cell-group>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="消息中心" is-link url="message/message"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的积分" is-link url="integral/integral"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的记录" is-link url="record/record"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="我的发布" is-link url="myIssue/myIssue"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" title="使用协议" is-link url="protocol/protocol"></wux-cell>
-    <wux-cell thumb="https://wux.cdn.cloverstd.com/logo.png" openType="feedback" title="反馈"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/bell.png?sign=5eea33d2ef4236d2fefe7d9781e49856&t=1559311176" title="消息中心" is-link url="message/message"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/accountbook.png?sign=921e6c51e5715fdd88e956e9aa96a3ef&t=1559311188" title="我的积分" is-link url="integral/integral"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/shopping.png?sign=0dab791e0297c64bd6705d9e95fc462b&t=1559311151" title="我的订单" is-link url="record/record"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/read.png?sign=d87e1cbd9357cc30782c8cb2c2fdeaec&t=1559311117" title="我的发布" is-link url="myIssue/myIssue"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/file-exception.png?sign=9b9cca0a3770c10e5b58162eff2f7565&t=1559311203" title="使用协议" is-link url="protocol/protocol"></wux-cell>
+    <wux-cell thumb="https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/question-circle.png?sign=3e923160703569984ee0654d74b9dafd&t=1559311218" openType="feedback" title="反馈"></wux-cell>
 </wux-cell-group>

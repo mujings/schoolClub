@@ -18,7 +18,8 @@
     "pages/center/protocol/protocol",
     "pages/center/message/message",
     "pages/center/myIssue/myIssue",
-    "pages/center/issueDetail/issueDetail"
+    "pages/center/issueDetail/issueDetail",
+    "pages/index/pay/pay"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -17,12 +17,12 @@
         </wux-cell>
         <wux-cell title="联系方式" hover-class="none">
             <wux-input slot="footer" placeholder-class="wux-text--right" placeholder="请输入联系方式" type="number"
-                maxlength="{{11}}" />
+                maxlength="{{11}}" bind:change="phoneInput"/>
         </wux-cell>
     </wux-cell-group>
 </view>
 
 <view class="btnBox wux-light--bg">
     <view class="left wux-pl--10">所需积分：{{integral}}</view>
-    <view class="wux-balanced--bg wux-light btn wux-text--center">确认</view>
+    <view class="wux-balanced--bg wux-light btn wux-text--center" catch:tap="confirm">确认</view>
 </view>

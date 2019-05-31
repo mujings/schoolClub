@@ -1,23 +1,20 @@
  <wux-tabs wux-class="bordered" controlled current="{{ key }}" bindchange="onTabsChange">
+     <wux-tab key="{{ 3 }}" title="待付款"></wux-tab>
      <wux-tab key="{{ 2 }}" title="购入"></wux-tab>
      <wux-tab key="{{ 1 }}" title="售出"></wux-tab>
  </wux-tabs>
  <view class="box">
-     <view class="content pd20 wux-light--bg mb1">
-         <image class="wux-mr--10" src="https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640" />
+     <view wx:for="{{list}}" class="content pd20 wux-light--bg mb1">
+         <image class="wux-mr--10" src="{{item.titlePic}}" />
          <view class="right">
              <view class="title">
-                 <view>杯中窥人</view>
-                 <navigator url='../recordDetail/recordDetail' hover-class='none' class='wux-balanced'>详情</navigator>
+                <view>{{item.name}}</view>
+                <navigator url='../recordDetail/recordDetail?orderId={{item.orderId}}' hover-class='none' class='wux-balanced'>详情</navigator>
              </view>
-             <view>
-                 ke888
-             </view>
-             <view>
-                 交易方式：当面交易
-             </view>
+             <view>{{item.author}}</view>
+             <view>交易方式：{{item.trade}}</view>
              <view class="status">
-                 <view>2019.03.03 12:03</view>
+                 <view>{{item.place_time}}</view>
                  <wux-tag color="#33CD5F" wux-class="wux-mr--0">交易完成</wux-tag>
              </view>
          </view>
