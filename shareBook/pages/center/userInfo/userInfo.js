@@ -4,10 +4,14 @@ import {
 import {
   tips
 } from "../../../utils/tip";
-let name, phone, stuCardNumber, idCardNumber;
+import {
+  wxRequestUpload
+} from "../../../utils/wxRequest";
+let name, phone, stuCardNumber, picIds; //图片id;
+
 Page({
   data: {
-    stuCardBackSrc: "https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190509095342.png?sign=a068ff24dd8a42c0de92d23589bfbe34&t=1557367415"
+    stuCardBackSrc: "https://686f-home-td6wb-1259196216.tcb.qcloud.la/images/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20190509095335.png?sign=a5c66d657232627afd3e2cf5fae3033f&t=1559381527"
   },
 
   //studentCode是学生证
@@ -18,10 +22,10 @@ Page({
       name = info.studentName;
       phone = info.phone;
       stuCardNumber = info.studentId;
-      idCardNumber = info.idCardNumber;
       that.setData({
         userInfo: info,
-        stuCardSrc: info.studentCode
+        stuCardSrc: info.studentCode,
+        status:info.status
       })
     })
   },
@@ -31,8 +35,7 @@ Page({
       studentName: name,
       studentId: stuCardNumber,
       phone: phone,
-      idCardNumber: idCardNumber,
-      studentCode: that.data.stuCardSrc
+      studentCode: picIds
     }
     wxRequest('/user/certification.wx', {
       json: JSON.stringify(json)
@@ -62,13 +65,11 @@ Page({
   uploadPic: function (img) {
     let that = this;
     wxRequestUpload(img, function (res) {
-      console.log('res');
-      console.log(JSON.parse(res.data))
-      let mydata = JSON.parse(res.data);
-      if (mydata.status == 'success') {
-        console.log(urls);
+      if (res.status == 'success') {
+        picIds = res.result.urlId;
         that.setData({
-          stuCardSrc: urls
+          status:10,
+          stuCardSrc: res.result.url
         })
       }
     })
@@ -85,9 +86,5 @@ Page({
 
   inputStuCard(res) {
     stuCardNumber = res.detail.value
-  },
-
-  inputIdCard(res) {
-    idCardNumber = res.detail.value
   }
 })

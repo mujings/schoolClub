@@ -12,7 +12,6 @@ let bookNum = 1; //图书数量
 Page({
   data: {
     images: [],
-    array: [],
     index: 0
   },
 
@@ -21,7 +20,8 @@ Page({
     picIds = [];
     if (options.isbn) {
       that.setData({
-        isbn: options.isbn
+        isbn: options.isbn,
+        array:[]
       })
     }
     wxRequest('/category/categorys.wx', {
@@ -46,7 +46,7 @@ Page({
     let json = res.detail.value;
     let categoryId = json.categoryId;
     delete json.categoryId
-    json.titlePic = this.data.images[0]
+    json.titlePic = picIds[0]
     json.pic = picIds
     json.number = bookNum;
     json.tradeWay = 1;
@@ -89,8 +89,7 @@ Page({
   //上传图片
   uploadPic: function (img) {
     let that = this,
-      urls = that.data.images;
-
+    urls = that.data.images;
     wxRequestUpload(img, function (res) {
       urls.push(res.result.url)
       picIds.push(res.result.urlId);
